@@ -1,0 +1,23 @@
+extends Node
+
+var char_pablo = true
+var char_mrsmiley = false
+var char_speed = false
+var char_megapablo = false
+var char_knight = false
+var char_paul = false
+var char_slime = false
+var char_donut = false
+var health = 4
+var coins = 0
+var cursortower = false
+var deluxe = false
+
+func _process(_delta):
+	if health == 5:
+		health = 4
+		print(health)
+	if health == 0:
+		print("Game Over")
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		health = 4

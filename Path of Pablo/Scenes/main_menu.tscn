@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca2ubj3avevtt"]
+
+[ext_resource type="Script" uid="uid://nwoxenj4k3b2" path="res://Scripts/main_menu.gd" id="1_48xlc"]
+[ext_resource type="FontFile" uid="uid://bh0yv0k5gdcxw" path="res://Assets/Fonts/Audiowide-Regular.ttf" id="2_48xlc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_48xlc")
+
+[node name="New Game" type="Button" parent="."]
+layout_mode = 0
+offset_top = 216.0
+offset_right = 348.0
+offset_bottom = 288.5
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 27
+text = "New Game"
+
+[node name="DLC" type="Button" parent="."]
+layout_mode = 0
+offset_top = 305.0
+offset_right = 348.0
+offset_bottom = 377.5
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 27
+text = "DLC"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 0
+offset_top = 400.0
+offset_right = 348.0
+offset_bottom = 472.5
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 27
+text = "Settings"
+
+[node name="Quit Game" type="Button" parent="."]
+layout_mode = 0
+offset_top = 496.0
+offset_right = 348.0
+offset_bottom = 568.5
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 27
+text = "Quit Game"
+
+[connection signal="pressed" from="DLC" to="." method="_on_dlc_pressed"]
+[connection signal="pressed" from="Quit Game" to="." method="_on_quit_game_pressed"]

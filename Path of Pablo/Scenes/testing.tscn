@@ -1,0 +1,491 @@
+[gd_scene load_steps=51 format=3 uid="uid://cwf5l3ar4mxao"]
+
+[ext_resource type="PackedScene" uid="uid://bgud5vqn3trjm" path="res://Scenes/global_characters.tscn" id="1_lq4et"]
+[ext_resource type="Script" uid="uid://cpif20ln3mcyi" path="res://Scripts/testing.gd" id="1_siu27"]
+[ext_resource type="Script" uid="uid://1sm76slcda4" path="res://Scripts/hud.gd" id="3_irbir"]
+[ext_resource type="Texture2D" uid="uid://ss5gmdgdvq1g" path="res://Assets/UI/hearts.png" id="3_sx6hp"]
+[ext_resource type="Texture2D" uid="uid://3hf72nccn2ns" path="res://Assets/Players/Donut/Donut.png" id="5_2343q"]
+[ext_resource type="Texture2D" uid="uid://tbyglrnjh7jm" path="res://Assets/Players/MegaPablo/MegaPablo_Icon.png" id="5_a4ydb"]
+[ext_resource type="Texture2D" uid="uid://bf6s6j2oausn0" path="res://Assets/Players/Mr.Smiley/Mr.Smiley_Icon.png" id="5_a06pk"]
+[ext_resource type="Texture2D" uid="uid://benixvtl6vpxa" path="res://Assets/Players/William The Warrior/William the Warrior_Icon.png" id="5_x6ncj"]
+[ext_resource type="Texture2D" uid="uid://be7h70eq44o2c" path="res://Assets/Players/Pablo/Pablo_Icon.png" id="6_a4ydb"]
+[ext_resource type="Texture2D" uid="uid://dwi7yc1ft8n47" path="res://Assets/Players/Speed/Speed-Icon.png" id="7_x6ncj"]
+[ext_resource type="Texture2D" uid="uid://c220rhg5ge2h8" path="res://Assets/Players/Paul the Mushroom/Paul.png" id="9_17ygw"]
+[ext_resource type="Texture2D" uid="uid://yhk1xni0ixji" path="res://icon.svg" id="9_a4ydb"]
+[ext_resource type="Texture2D" uid="uid://bchv00qyuu8u0" path="res://Assets/Players/Slime/Slime.png" id="10_4u8n4"]
+[ext_resource type="Texture2D" uid="uid://cm1x3xy0opse7" path="res://Assets/Other/coin2_16x16.png" id="10_383b8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ppfb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8si1v"]
+atlas = ExtResource("3_sx6hp")
+region = Rect2(38, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdlfs"]
+atlas = ExtResource("3_sx6hp")
+region = Rect2(57, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a06pk"]
+atlas = ExtResource("3_sx6hp")
+region = Rect2(76, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irbir"]
+atlas = ExtResource("3_sx6hp")
+region = Rect2(19, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4ydb"]
+atlas = ExtResource("3_sx6hp")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6ncj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8si1v")
+}],
+"loop": true,
+"name": &"1_2_health",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdlfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a06pk")
+}],
+"loop": true,
+"name": &"1_4_health",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irbir")
+}],
+"loop": true,
+"name": &"3_4_health",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a06pk")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4ydb")
+}],
+"loop": true,
+"name": &"full_health",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_383b8"]
+bg_color = Color(0.4745098, 0.40392157, 0.36078432, 0.3529412)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.84313726, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppsat"]
+atlas = ExtResource("5_2343q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_383b8"]
+atlas = ExtResource("5_x6ncj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6ncj"]
+atlas = ExtResource("5_a4ydb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17ygw"]
+atlas = ExtResource("5_a06pk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u8n4"]
+atlas = ExtResource("6_a4ydb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqo4q"]
+atlas = ExtResource("9_17ygw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcebo"]
+atlas = ExtResource("10_4u8n4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2343q"]
+atlas = ExtResource("7_x6ncj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xi0es"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppsat")
+}],
+"loop": true,
+"name": &"donut",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_383b8")
+}],
+"loop": true,
+"name": &"knight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6ncj")
+}],
+"loop": true,
+"name": &"megapablo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17ygw")
+}],
+"loop": true,
+"name": &"mr.smiley",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u8n4")
+}],
+"loop": true,
+"name": &"pablo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqo4q")
+}],
+"loop": true,
+"name": &"paul",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcebo")
+}],
+"loop": true,
+"name": &"slime",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2343q")
+}],
+"loop": true,
+"name": &"speed",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi0es"]
+atlas = ExtResource("10_383b8")
+region = Rect2(0, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o38ri"]
+atlas = ExtResource("10_383b8")
+region = Rect2(14, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud6d8"]
+atlas = ExtResource("10_383b8")
+region = Rect2(28, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brvua"]
+atlas = ExtResource("10_383b8")
+region = Rect2(42, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umy1s"]
+atlas = ExtResource("10_383b8")
+region = Rect2(56, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgtbq"]
+atlas = ExtResource("10_383b8")
+region = Rect2(70, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf6gr"]
+atlas = ExtResource("10_383b8")
+region = Rect2(84, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mtpr"]
+atlas = ExtResource("10_383b8")
+region = Rect2(98, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhrr3"]
+atlas = ExtResource("10_383b8")
+region = Rect2(112, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dv2pi"]
+atlas = ExtResource("10_383b8")
+region = Rect2(126, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5pdk"]
+atlas = ExtResource("10_383b8")
+region = Rect2(140, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpw5b"]
+atlas = ExtResource("10_383b8")
+region = Rect2(154, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jor57"]
+atlas = ExtResource("10_383b8")
+region = Rect2(168, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sweof"]
+atlas = ExtResource("10_383b8")
+region = Rect2(182, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ce8r"]
+atlas = ExtResource("10_383b8")
+region = Rect2(196, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igmtr"]
+atlas = ExtResource("10_383b8")
+region = Rect2(210, 0, 14, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sqo4q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi0es")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o38ri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ud6d8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brvua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umy1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgtbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yf6gr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mtpr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhrr3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dv2pi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5pdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpw5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jor57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sweof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ce8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igmtr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_siu27"]
+distance = -41.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6ncj"]
+size = Vector2(53.5, 53)
+
+[node name="Testing" type="Node2D"]
+script = ExtResource("1_siu27")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -47.0
+offset_right = 20.0
+offset_bottom = 40.0
+
+[node name="Global_Characters" parent="." instance=ExtResource("1_lq4et")]
+
+[node name="Camera2D" type="Camera2D" parent="Global_Characters"]
+zoom = Vector2(4, 4)
+
+[node name="HUD" type="Panel" parent="Global_Characters"]
+offset_left = -144.0
+offset_top = -80.0
+offset_right = 144.0
+offset_bottom = 81.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ppfb")
+script = ExtResource("3_irbir")
+
+[node name="Heart" type="AnimatedSprite2D" parent="Global_Characters/HUD"]
+position = Vector2(18.25, 141.75)
+scale = Vector2(1.7352941, 1.7352941)
+sprite_frames = SubResource("SpriteFrames_x6ncj")
+animation = &"3_4_health"
+autoplay = "full_health"
+frame_progress = 0.32309967
+
+[node name="Character" type="Panel" parent="Global_Characters/HUD"]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 4.0
+offset_right = 285.0
+offset_bottom = 44.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_383b8")
+
+[node name="Character_Selection" type="AnimatedSprite2D" parent="Global_Characters/HUD/Character"]
+position = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_xi0es")
+animation = &"donut"
+autoplay = "pablo"
+
+[node name="Coins" type="Panel" parent="Global_Characters/HUD"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 44.0
+offset_bottom = 25.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Global_Characters/HUD/Coins"]
+position = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_sqo4q")
+frame_progress = 0.7453281
+
+[node name="Label" type="Label" parent="Global_Characters/HUD/Coins"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = -2.0
+offset_right = 40.0
+offset_bottom = 21.0
+text = "x"
+horizontal_alignment = 1
+
+[node name="PickPlayer" type="Panel" parent="Global_Characters"]
+offset_left = -145.0
+offset_top = -81.0
+offset_right = 144.0
+offset_bottom = 81.0
+
+[node name="pablo_button" type="Button" parent="Global_Characters/PickPlayer"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 66.0
+offset_bottom = 23.0
+text = "Pablo"
+
+[node name="mr_smiley_button" type="Button" parent="Global_Characters/PickPlayer"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 44.0
+offset_right = 91.0
+offset_bottom = 75.0
+text = "Mr.Smiley"
+
+[node name="speed_button" type="Button" parent="Global_Characters/PickPlayer"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 84.0
+offset_right = 91.0
+offset_bottom = 115.0
+text = "Speed"
+
+[node name="megapablo_button" type="Button" parent="Global_Characters/PickPlayer"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 124.0
+offset_right = 91.0
+offset_bottom = 155.0
+text = "MegaPablo"
+
+[node name="knight_button" type="Button" parent="Global_Characters/PickPlayer"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 6.0
+offset_right = 178.0
+offset_bottom = 37.0
+text = "Knight"
+
+[node name="paul_button" type="Button" parent="Global_Characters/PickPlayer"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 38.0
+offset_right = 178.0
+offset_bottom = 69.0
+text = "Paul"
+
+[node name="slime_button" type="Button" parent="Global_Characters/PickPlayer"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 72.0
+offset_right = 178.0
+offset_bottom = 103.0
+text = "Slime"
+
+[node name="donut_button" type="Button" parent="Global_Characters/PickPlayer"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 108.0
+offset_right = 178.0
+offset_bottom = 139.0
+text = "Donut"
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="Platform" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape2D_siu27")
+
+[node name="Obstacle" type="StaticBody2D" parent="."]
+position = Vector2(128, 19)
+
+[node name="Icon" type="Sprite2D" parent="Obstacle"]
+position = Vector2(1, -1)
+scale = Vector2(0.4140625, 0.4140625)
+texture = ExtResource("9_a4ydb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle"]
+position = Vector2(0.75, -1)
+shape = SubResource("RectangleShape2D_x6ncj")
+
+[node name="Obstacle2" type="StaticBody2D" parent="."]
+position = Vector2(224, -13)
+
+[node name="Icon" type="Sprite2D" parent="Obstacle2"]
+position = Vector2(1, -1)
+scale = Vector2(0.4140625, 0.4140625)
+texture = ExtResource("9_a4ydb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle2"]
+position = Vector2(0.75, -1)
+shape = SubResource("RectangleShape2D_x6ncj")
+
+[connection signal="pressed" from="Global_Characters/PickPlayer/pablo_button" to="." method="_on_pablo_button_pressed"]
+[connection signal="pressed" from="Global_Characters/PickPlayer/mr_smiley_button" to="." method="_on_mr_smiley_button_pressed"]
+[connection signal="pressed" from="Global_Characters/PickPlayer/speed_button" to="." method="_on_speed_button_pressed"]
+[connection signal="pressed" from="Global_Characters/PickPlayer/megapablo_button" to="." method="_on_megapablo_button_pressed"]
+[connection signal="pressed" from="Global_Characters/PickPlayer/knight_button" to="." method="_on_knight_button_pressed"]
+[connection signal="pressed" from="Global_Characters/PickPlayer/paul_button" to="." method="_on_paul_button_pressed"]
+[connection signal="pressed" from="Global_Characters/PickPlayer/slime_button" to="." method="_on_slime_button_pressed"]
+[connection signal="pressed" from="Global_Characters/PickPlayer/donut_button" to="." method="_on_donut_button_pressed"]
