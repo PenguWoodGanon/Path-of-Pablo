@@ -88,4 +88,7 @@ position = Vector2(266, -11)
 position = Vector2(6, -8.5)
 shape = SubResource("RectangleShape2D_m5wm3")
 
+[node name="Marker2D" type="Marker2D" parent="Level 1/Door_Level_1"]
+position = Vector2(-186, -5)
+
 [connection signal="body_entered" from="Level 1/Door_Level_1" to="." method="_on_door_level_1_body_entered"]
