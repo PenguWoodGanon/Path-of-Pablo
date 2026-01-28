@@ -1,3 +1,57 @@
-[gd_scene format=3 uid="uid://cfot14xjjjc7t"]
+[gd_scene load_steps=5 format=3 uid="uid://cfot14xjjjc7t"]
+
+[ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_qy8mf"]
+[ext_resource type="PackedScene" uid="uid://bgud5vqn3trjm" path="res://Scenes/global_characters.tscn" id="2_kam3d"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qy8mf"]
+texture = ExtResource("1_qy8mf")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 10.881453, 16, 11.079296, 16, 16, -16, 16)
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kam3d"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_qy8mf")
 
 [node name="Tower of Grass" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_kam3d")
+format = 2
+layer_0/tile_data = PackedInt32Array(65531, 1, 2, 65532, 1, 0, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, -5, 196609, 0, -65541, 196609, 0, -131077, 196609, 0, -196613, 196609, 0, -262149, 196609, 0, -327684, 131073, 0, -327683, 131073, 0, -327685, 1, 2, 131063, 1, 2, 131064, 1, 2, 131065, 1, 2, 131066, 1, 2, 131067, 1, 2, 131068, 1, 2, 131069, 1, 2, 131070, 1, 2, 131071, 1, 2, 65536, 1, 2, 65537, 1, 2, 65527, 1, 2, -9, 1, 2, -65545, 1, 2, -131081, 1, 2, -196617, 1, 2, -262153, 1, 2, -327689, 1, 2, -327688, 1, 2, -327687, 1, 2, -327686, 1, 2, -262150, 1, 2, -196614, 1, 2, -131078, 1, 2, -65542, 1, 2, -6, 1, 2, 65530, 1, 2, 65529, 1, 2, 65528, 1, 2, -8, 1, 2, -65544, 1, 2, -131080, 1, 2, -196616, 1, 2, -262152, 1, 2, -262151, 1, 2, -196615, 1, 2, -131079, 1, 2, -65543, 1, 2, -7, 1, 2)
+
+[node name="Global_Characters" parent="." instance=ExtResource("2_kam3d")]
+position = Vector2(-101, -22)
+
+[node name="Camera2D" type="Camera2D" parent="Global_Characters"]
+zoom = Vector2(4, 4)
