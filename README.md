@@ -15,4 +15,4 @@ Please do not take any of the code from my project. You can use it for inspirati
 2. Import this repository into your GitHub account
 3. Go into the folder and open the project.godot file
 4. Hit play.
-5. Playtest and add your comments in the Playtest.md file in the repository.
+5. Playtest and add your comments in the Playtest.md file in the Playtesting Folder in the repository.
