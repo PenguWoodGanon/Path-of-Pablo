@@ -1,6 +1,6 @@
 Hello! Welcome to My Repository on my new Roguelike: Path of Pablo!
 
-                            About the Game
+                                        About the Game
 Path of Pablo is a roguelike game, where you progress through levels of a tower. 
 There are four towers, each one increasing in difficulty. In each level, you will 
 solve puzzles, collect coins, and find chests to purchase booster packs from the shop. 
@@ -10,7 +10,7 @@ Some may seem useless, but might be crucial.
 
 Please do not take any of the code from my project. You can use it for inspiration and playtest it if you want.
 
-                        How to Playtest:
+                                      How to Playtest:
 1. Download GitHub Desktop
 2. Import this repository into your GitHub account
 3. Go into the folder and open the project.godot file
