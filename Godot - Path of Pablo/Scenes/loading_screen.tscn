@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cyk3gu07j4u0t" path="res://Scripts/loading_screen.gd" id="1_fayou"]
 [ext_resource type="Texture2D" uid="uid://bqgeqts68l7wg" path="res://Assets/Icons/godot_logo.png" id="1_nfm0g"]
 [ext_resource type="Texture2D" uid="uid://ll38v1rx2o4g" path="res://Assets/Icons/pengugamestudios.png" id="2_fayou"]
-[ext_resource type="FontFile" uid="uid://bh0yv0k5gdcxw" path="res://Assets/Fonts/Audiowide-Regular.ttf" id="3_1godw"]
+[ext_resource type="FontFile" uid="uid://bh0yv0k5gdcxw" path="res://Assets/Audiowide-Regular.ttf" id="3_1godw"]
 [ext_resource type="Texture2D" uid="uid://b3mtndw1g2hvh" path="res://Assets/Players/Pablo/Pablo.png" id="5_1godw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yisgd"]
