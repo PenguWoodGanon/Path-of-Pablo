@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=51 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
 [ext_resource type="PackedScene" uid="uid://bgud5vqn3trjm" path="res://Scenes/global_characters.tscn" id="2_dl4dk"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bchv00qyuu8u0" path="res://Assets/Players/Slime/Slime.png" id="11_wxnti"]
 [ext_resource type="Texture2D" uid="uid://dwi7yc1ft8n47" path="res://Assets/Players/Speed/Speed-Icon.png" id="12_uy8nd"]
 [ext_resource type="Texture2D" uid="uid://cm1x3xy0opse7" path="res://Assets/Other/coin2_16x16.png" id="13_h0onb"]
+[ext_resource type="FontFile" uid="uid://2iswwv0mx8lo" path="res://Assets/Fonts/Audiowide-Regular.ttf" id="14_15son"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ihv"]
 texture = ExtResource("1_epmka")
@@ -409,3 +410,16 @@ offset_right = 40.0
 offset_bottom = 21.0
 text = "x"
 horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = -35.999996
+offset_top = -90.0
+offset_right = 271.0
+offset_bottom = 43.0
+scale = Vector2(0.30313924, 0.33067)
+theme_override_fonts/font = ExtResource("14_15son")
+theme_override_font_sizes/font_size = 50
+text = "Dormant
+Grasslands"
+horizontal_alignment = 1
+vertical_alignment = 1
