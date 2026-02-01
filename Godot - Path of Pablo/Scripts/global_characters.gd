@@ -107,3 +107,7 @@ func _physics_process(delta):
 func print_hitbox_size():
 	print("Width: ", hitbox.shape.size.x)
 	print("Height: ", hitbox.shape.size.y)
+
+
+func _on_spike_1_body_entered(body):
+	Global.health =- 1

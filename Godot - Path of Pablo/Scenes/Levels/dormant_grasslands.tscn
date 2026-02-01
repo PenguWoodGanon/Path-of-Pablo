@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=52 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
 [ext_resource type="PackedScene" uid="uid://bgud5vqn3trjm" path="res://Scenes/global_characters.tscn" id="2_dl4dk"]
@@ -349,6 +349,9 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15son"]
+size = Vector2(64, 17)
+
 [node name="Dormant Grasslands" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -411,7 +414,7 @@ offset_bottom = 21.0
 text = "x"
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 offset_left = -35.999996
 offset_top = -90.0
 offset_right = 271.0
@@ -423,3 +426,15 @@ text = "Dormant
 Grasslands"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Spike1" type="Area2D" parent="."]
+position = Vector2(258, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike1"]
+position = Vector2(-2, 6.5)
+shape = SubResource("RectangleShape2D_15son")
+
+[node name="HitTimer" type="Timer" parent="Spike1"]
+wait_time = 1.5
+
+[connection signal="body_entered" from="Spike1" to="Global_Characters" method="_on_spike_1_body_entered"]
