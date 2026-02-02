@@ -23,6 +23,10 @@ Global="*res://global.gd"
 
 window/stretch/aspect="expand"
 
+[global_group]
+
+player=""
+
 [input]
 
 jump={

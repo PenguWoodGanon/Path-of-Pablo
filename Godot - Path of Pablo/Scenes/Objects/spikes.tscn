@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbgxx1swxtutd"]
+
+[ext_resource type="Script" uid="uid://bkw1j6w0qcxgr" path="res://Scripts/spikes.gd" id="1_8h1qs"]
+[ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_mall3"]
+
+[node name="Spikes" type="Area2D"]
+script = ExtResource("1_8h1qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mall3")
+region_enabled = true
+region_rect = Rect2(96, 143, 32, 17)
+
+[node name="HitBox" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 1)
+polygon = PackedVector2Array(-15, 7, 0, -8, 14, 7)
+
+[node name="DestinationPoint" type="Marker2D" parent="."]
+position = Vector2(-46, -26)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.496
+
+[connection signal="body_entered" from="." to="." method="_on_spikes_entered"]
+[connection signal="timeout" from="Timer" to="." method="when_timer_finished"]

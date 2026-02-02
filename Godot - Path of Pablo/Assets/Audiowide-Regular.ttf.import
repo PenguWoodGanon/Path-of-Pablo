@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://2iswwv0mx8lo"
-path="res://.godot/imported/Audiowide-Regular.ttf-8fc905e8aed16a886b622ab990607d5b.fontdata"
+path="res://.godot/imported/Audiowide-Regular.ttf-81125d699e6fa61ec3e1be1b81afc9fa.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/Audiowide-Regular.ttf"
-dest_files=["res://.godot/imported/Audiowide-Regular.ttf-8fc905e8aed16a886b622ab990607d5b.fontdata"]
+source_file="res://Assets/Audiowide-Regular.ttf"
+dest_files=["res://.godot/imported/Audiowide-Regular.ttf-81125d699e6fa61ec3e1be1b81afc9fa.fontdata"]
 
 [params]
 
