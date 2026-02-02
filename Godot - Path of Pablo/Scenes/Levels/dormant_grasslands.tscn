@@ -435,13 +435,13 @@ autostart = true
 position = Vector2(240, -9)
 
 [node name="DestinationPoint" parent="Spikes" index="2"]
-position = Vector2(-27, -35)
+position = Vector2(-51, -35)
 
 [node name="Spikes2" parent="." instance=ExtResource("15_b6t1p")]
 position = Vector2(272, -9)
 
 [node name="DestinationPoint" parent="Spikes2" index="2"]
-position = Vector2(-59, -35)
+position = Vector2(-83, -35)
 
 [editable path="Spikes"]
 [editable path="Spikes2"]
