@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdk2xglt08pfb"]
+
+[ext_resource type="Script" uid="uid://xbsmrea77hw2" path="res://Scripts/level_select.gd" id="1_nkys2"]
+[ext_resource type="FontFile" uid="uid://2iswwv0mx8lo" path="res://Assets/Audiowide-Regular.ttf" id="2_lx4vd"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nkys2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -374.0
+offset_top = -277.0
+offset_right = -48.0
+offset_bottom = 277.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Biomes_Title" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -113.5
+offset_top = 16.0
+offset_right = 273.5
+offset_bottom = 144.0
+grow_horizontal = 2
+scale = Vector2(0.5962999, 0.5962999)
+theme_override_fonts/font = ExtResource("2_lx4vd")
+theme_override_font_sizes/font_size = 100
+text = "Biomes"
+horizontal_alignment = 1
+
+[node name="dormgrass" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 102.0
+offset_right = 253.0
+offset_bottom = 133.0
+text = "Dormant Grasslands"
+
+[connection signal="pressed" from="Panel/dormgrass" to="." method="_on_dormgrass_pressed"]

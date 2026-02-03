@@ -423,7 +423,6 @@ text = "x"
 horizontal_alignment = 1
 
 [node name="Mr Smiley Talk Panel" type="Panel" parent="Global_Characters"]
-visible = false
 offset_left = -145.0
 offset_top = -81.0
 offset_right = 145.0
