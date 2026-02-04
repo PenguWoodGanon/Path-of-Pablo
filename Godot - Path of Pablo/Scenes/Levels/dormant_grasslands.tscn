@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=57 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Script" uid="uid://eoll4j6ft2ul" path="res://Scripts/dormant_grasslands.gd" id="1_e1dbv"]
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
@@ -56,6 +56,9 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_c0ihv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1dbv"]
+bg_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0hb7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -353,8 +356,8 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1dbv"]
-bg_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir0mu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Dormant Grasslands" type="Node2D"]
 script = ExtResource("1_e1dbv")
@@ -366,6 +369,33 @@ layer_0/tile_data = PackedInt32Array(65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0,
 
 [node name="Global_Characters" parent="." instance=ExtResource("2_dl4dk")]
 position = Vector2(-20, -108)
+
+[node name="Mr Smiley Talk Panel" type="Panel" parent="Global_Characters"]
+offset_left = -145.0
+offset_top = -81.0
+offset_right = 145.0
+offset_bottom = 81.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1dbv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Global_Characters/Mr Smiley Talk Panel"]
+position = Vector2(145.5, 59.5)
+scale = Vector2(2.34375, 2.34375)
+texture = ExtResource("8_e1dbv")
+
+[node name="Panel" type="Panel" parent="Global_Characters/Mr Smiley Talk Panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 112.0
+offset_right = 282.0
+offset_bottom = 152.0
+
+[node name="Label" type="Label" parent="Global_Characters/Mr Smiley Talk Panel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Camera2D" type="Camera2D" parent="Global_Characters"]
 zoom = Vector2(4, 4)
@@ -422,33 +452,6 @@ theme_override_font_sizes/font_size = 50
 text = "x"
 horizontal_alignment = 1
 
-[node name="Mr Smiley Talk Panel" type="Panel" parent="Global_Characters"]
-offset_left = -145.0
-offset_top = -81.0
-offset_right = 145.0
-offset_bottom = 81.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_e1dbv")
-
-[node name="Sprite2D" type="Sprite2D" parent="Global_Characters/Mr Smiley Talk Panel"]
-position = Vector2(145.5, 59.5)
-scale = Vector2(2.34375, 2.34375)
-texture = ExtResource("8_e1dbv")
-
-[node name="Panel" type="Panel" parent="Global_Characters/Mr Smiley Talk Panel"]
-layout_mode = 0
-offset_left = 9.0
-offset_top = 112.0
-offset_right = 282.0
-offset_bottom = 152.0
-
-[node name="Label" type="Label" parent="Global_Characters/Mr Smiley Talk Panel/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="Title" type="Label" parent="."]
 offset_left = -35.999996
 offset_top = -90.0
@@ -502,32 +505,31 @@ position = Vector2(-51, -35)
 [node name="MrSmiley Event" type="Node" parent="."]
 
 [node name="MrSmiley" type="Sprite2D" parent="MrSmiley Event"]
-position = Vector2(244, -400)
+position = Vector2(333, -400.00003)
 texture = ExtResource("8_e1dbv")
 
-[node name="mr_smiley" type="Button" parent="MrSmiley Event/MrSmiley"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -16.0
-offset_top = -16.0
-offset_right = -16.0
-offset_bottom = -16.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-
 [node name="Label" type="Label" parent="MrSmiley Event"]
-offset_left = 183.99998
+offset_left = 272.0
 offset_top = -439.99997
-offset_right = 635.0
+offset_right = 723.0
 offset_bottom = -374.99997
 scale = Vector2(0.27887255, 0.27887255)
 theme_override_fonts/font = ExtResource("14_15son")
 theme_override_font_sizes/font_size = 50
 text = "Click to Interact"
 
-[connection signal="pressed" from="MrSmiley Event/MrSmiley/mr_smiley" to="." method="_on_mr_smiley_pressed"]
+[node name="Button" type="Button" parent="MrSmiley Event"]
+offset_left = 314.0
+offset_top = -419.0
+offset_right = 352.0
+offset_bottom = -384.00003
+theme_override_styles/normal = SubResource("StyleBoxFlat_ir0mu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ir0mu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ir0mu")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ir0mu")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ir0mu")
+
+[connection signal="pressed" from="MrSmiley Event/Button" to="." method="_on_mr_smiley_pressed"]
 
 [editable path="Spikes/Spikes2"]
 [editable path="Spikes/Spikes"]

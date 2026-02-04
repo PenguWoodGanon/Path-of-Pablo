@@ -12,7 +12,7 @@ var health = 4
 var coins = 0
 var cursortower = false
 var deluxe = false
-var char_move = false
+var char_move = true
 
 func _process(_delta):
 	if health == 5:
