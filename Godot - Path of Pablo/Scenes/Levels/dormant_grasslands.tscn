@@ -528,6 +528,12 @@ text = ">"
 [node name="Camera2D" type="Camera2D" parent="Global_Characters"]
 zoom = Vector2(4, 4)
 
+[node name="Characters" type="Panel" parent="Global_Characters"]
+offset_left = -144.0
+offset_top = -81.0
+offset_right = 144.0
+offset_bottom = 81.0
+
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Platform" parent="Platforms" instance=ExtResource("17_b31i3")]
