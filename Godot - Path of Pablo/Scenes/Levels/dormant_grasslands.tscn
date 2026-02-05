@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=58 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Script" uid="uid://eoll4j6ft2ul" path="res://Scripts/dormant_grasslands.gd" id="1_e1dbv"]
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bbgxx1swxtutd" path="res://Scenes/Objects/spikes.tscn" id="15_b6t1p"]
 [ext_resource type="Script" uid="uid://d4g044ubycgkv" path="res://Scripts/title_dormant.gd" id="15_truun"]
 [ext_resource type="PackedScene" uid="uid://b5vh65i38tk5k" path="res://Scenes/Objects/platform.tscn" id="17_b31i3"]
+[ext_resource type="Script" uid="uid://disqhljkus1q" path="res://Scenes/Levels/mr_smiley_text.gd" id="17_ir0mu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ihv"]
 texture = ExtResource("1_epmka")
@@ -56,9 +57,6 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_c0ihv")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1dbv"]
-bg_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0hb7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -356,6 +354,9 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1dbv"]
+bg_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir0mu"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
@@ -367,38 +368,26 @@ tile_set = SubResource("TileSet_xm3p5")
 format = 2
 layer_0/tile_data = PackedInt32Array(65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, -3, 196609, 0, -65539, 196609, 0, -131075, 196609, 0, 65533, 1, 2, 131069, 1, 2, 131070, 1, 2, 131071, 1, 2, 65536, 1, 2, 65537, 1, 2, 65538, 1, 2, 65539, 1, 2, 131075, 1, 2, 131074, 1, 2, 131073, 1, 2, 131072, 1, 2, 196607, 1, 2, 196606, 1, 2, 196605, 1, 2, 196604, 1, 2, 196603, 1, 2, 196602, 1, 2, 131066, 1, 2, 131065, 1, 2, 196601, 1, 2, 65529, 1, 2, -7, 1, 2, -65543, 1, 2, -131079, 1, 2, -196615, 1, 2, -262151, 1, 2, -262150, 1, 2, -262149, 1, 2, -262148, 1, 2, -196612, 1, 2, -131076, 1, 2, -65540, 1, 2, -4, 1, 2, 65532, 1, 2, 131068, 1, 2, 131067, 1, 2, 65531, 1, 2, 65530, 1, 2, -6, 1, 2, -65542, 1, 2, -65541, 1, 2, -5, 1, 2, -131077, 1, 2, -131078, 1, 2, -196614, 1, 2, -196613, 1, 2, -65536, 65537, 2, -196611, 196609, 0, -262147, 1, 2, 3, 1, 0, 4, 1, 0, 5, 1, 2, 6, 1, 2, 8, 1, 0, 7, 1, 0, 9, 1, 2, 65541, 1, 2, 65540, 1, 2, 131076, 1, 2, 131077, 1, 2, 131078, 1, 2, 131079, 1, 2, 131080, 1, 2, 131081, 1, 2, 65545, 1, 2, 65544, 1, 2, 65543, 1, 2, 65542, 1, 2, -327687, 1, 2, -327686, 1, 2, -327685, 1, 2, -327684, 1, 2, -327683, 1, 2, -65531, 65537, 1, -65530, 1, 1, -65526, 1, 1, 10, 1, 2, 65546, 1, 2, 131082, 1, 2, -65527, 65537, 1, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, -65521, 65537, 1, -131056, 65537, 1, -196591, 65537, 1, -262126, 65537, 1, -262125, 1, 0, -196589, 1, 2, -131053, 1, 2, -65517, 1, 2, 19, 1, 2, 18, 1, 2, 17, 1, 2, 16, 1, 2, 15, 1, 2, -65520, 1, 2, -65519, 1, 2, -65518, 1, 2, -131054, 1, 2, -196590, 1, 2, -131055, 1, 2, 65547, 1, 2, 65548, 1, 2, 65549, 1, 2, 65550, 1, 2, 65551, 1, 2, 65552, 1, 2, 65553, 1, 2, 65554, 1, 2, 65555, 1, 2, 131091, 1, 2, 131090, 1, 2, 131089, 1, 2, 131088, 1, 2, 131087, 1, 2, 131086, 1, 2, 131085, 1, 2, 131084, 1, 2, 131083, 1, 2, 131092, 1, 2, 65556, 1, 2, 20, 1, 2, -65516, 1, 2, -131052, 1, 2, -196588, 1, 2, -262124, 1, 0, 131093, 1, 2, 131094, 1, 2, 131095, 1, 2, 131096, 1, 2, 131097, 1, 2, 65561, 1, 2, 25, 1, 2, -65511, 1, 2, -131047, 1, 2, -196583, 1, 2, -262119, 1, 0, -262120, 1, 0, -262121, 1, 0, -262122, 1, 0, -262123, 1, 0, -196587, 1, 2, -131051, 1, 2, -65515, 1, 2, 21, 1, 2, 65557, 1, 2, 65558, 1, 2, 65559, 1, 2, 65560, 1, 2, 24, 1, 2, -65512, 1, 2, -131048, 1, 2, -196584, 1, 2, -196585, 1, 2, -196586, 1, 2, -131050, 1, 2, -65514, 1, 2, 22, 1, 2, 23, 1, 2, -65513, 1, 2, -131049, 1, 2, -458732, 131073, 0, -458731, 131073, 0, -458730, 131073, 0, -458729, 131073, 0, -458728, 131073, 0, -458727, 131073, 0, -524268, 1, 2, -524267, 1, 2, -524266, 1, 2, -524265, 1, 2, -524264, 1, 2, -524263, 1, 2, -589804, 1, 2, -589803, 1, 2, -589802, 1, 2, -589801, 1, 2, -589800, 1, 2, -589799, 1, 2, -524269, 65537, 0, -589805, 65537, 0, -458733, 131073, 1, -327666, 196609, 1, -393202, 1, 1, -393203, 1, 0, -393204, 1, 0, -393205, 1, 0, -327669, 131073, 0, -327668, 131073, 0, -327667, 131073, 0, -393206, 1, 0, -327670, 131073, 0, -393207, 65537, 1, -327671, 131073, 1, -327674, 196609, 1, -393210, 1, 1, -327676, 131073, 0, -327675, 131073, 0, -458747, 1, 1, -524284, 1, 1, -393211, 1, 2, -393212, 1, 2, -458748, 1, 2, -393213, 1, 2, -458750, 1, 2, -524286, 1, 0, -524285, 1, 0, -458749, 1, 2, -393219, 1, 2, -458755, 1, 2, -524291, 196609, 0, -589827, 196609, 0, -655363, 196609, 0, -393223, 1, 2, -393222, 1, 2, -393221, 1, 2, -393220, 1, 2, -458756, 1, 2, -458757, 1, 2, -524293, 1, 2, -524294, 1, 2, -458758, 1, 2, -458759, 1, 2, -524295, 1, 2, -589830, 1, 2, -589831, 1, 2, -655367, 1, 2, -655366, 1, 2, -655365, 1, 2, -589829, 1, 2, -589828, 1, 2, -524292, 1, 2, -655364, 1, 2, -720899, 196609, 0, -786435, 196609, 0, -851971, 196609, 0, -917507, 196609, 0, -983043, 196609, 0, -1048579, 196609, 0, -720903, 1, 2, -720902, 1, 2, -720901, 1, 2, -720900, 1, 2, -786436, 1, 2, -851972, 1, 2, -917508, 1, 2, -983044, 1, 2, -1048580, 1, 2, -1048581, 1, 2, -1048582, 1, 2, -1048583, 1, 2, -983047, 1, 2, -917511, 1, 2, -917510, 1, 2, -851974, 1, 2, -786438, 1, 2, -786439, 1, 2, -851975, 1, 2, -983046, 1, 2, -983045, 1, 2, -917509, 1, 2, -851973, 1, 2, -786437, 1, 2, -524287, 1, 0, -524288, 1, 0, -458753, 1, 0, -458754, 1, 0, -393218, 1, 2, -393217, 1, 2, -458752, 1, 2, -458751, 1, 2, -393214, 1, 2, -393215, 1, 2, -393216, 1, 2, -327681, 1, 2, -327682, 1, 2, -262146, 131073, 0, -262145, 131073, 0, -327680, 131073, 0, -327679, 131073, 0, -327678, 131073, 0, -327677, 131073, 0, -720893, 131073, 1, -720892, 131073, 0, -720891, 131073, 0, -720890, 131073, 0, -720889, 131073, 0, -786428, 1, 0, -786429, 65537, 1, -786427, 1, 0, -786426, 1, 0, -786425, 1, 0, -786424, 1, 0, -786423, 1, 0, -786422, 1, 0, -786421, 1, 0, -786420, 1, 0, -786419, 1, 0, -786418, 1, 0, -786417, 1, 0, -786416, 1, 0, -786415, 1, 0, -786414, 1, 0, -655341, 65537, 0, -720877, 1, 2, -786413, 1, 2, -851949, 65537, 0, -917485, 65537, 0, -983021, 65537, 0, -655340, 1, 2, -655339, 1, 2, -655338, 1, 2, -655337, 1, 2, -655336, 1, 2, -655335, 1, 2, -720871, 1, 2, -786407, 1, 2, -851943, 1, 2, -917479, 1, 2, -983015, 1, 2, -983016, 1, 2, -983017, 1, 2, -983018, 1, 2, -983019, 1, 2, -983020, 1, 2, -917484, 1, 2, -851948, 1, 2, -786412, 1, 2, -720876, 1, 2, -720875, 1, 2, -720874, 1, 2, -720873, 1, 2, -786409, 1, 2, -786408, 1, 2, -851944, 1, 2, -851945, 1, 2, -917481, 1, 2, -917482, 1, 2, -851946, 1, 2, -786410, 1, 2, -720872, 1, 2, -917480, 1, 2, -917483, 1, 2, -851947, 1, 2, -786411, 1, 2, -720888, 131073, 0, -720887, 131073, 0, -720886, 131073, 0, -720885, 131073, 0, -720884, 131073, 0, -720883, 131073, 0, -720882, 131073, 0, -720881, 131073, 0, -720880, 131073, 0, -720879, 131073, 0, -720878, 131073, 0, -1048557, 65537, 0, -1114093, 65537, 0, -1179629, 65537, 0, -1048551, 1, 2, -1048552, 1, 2, -1048553, 1, 2, -1048554, 1, 2, -1048555, 1, 2, -1048556, 1, 2, -1114092, 1, 2, -1179628, 1, 2, -1179627, 1, 2, -1179626, 1, 2, -1179625, 1, 2, -1179624, 1, 2, -1179623, 1, 2, -1114087, 1, 2, -1114088, 1, 2, -1114089, 1, 2, -1114090, 1, 2, -1114091, 1, 2)
 
+[node name="Title" type="Label" parent="."]
+offset_left = -35.999996
+offset_top = -90.0
+offset_right = 271.0
+offset_bottom = 43.0
+scale = Vector2(0.30313924, 0.33067)
+theme_override_fonts/font = ExtResource("14_15son")
+theme_override_font_sizes/font_size = 50
+text = "Dormant
+Grasslands"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("15_truun")
+
+[node name="Timer" type="Timer" parent="Title"]
+wait_time = 0.1
+autostart = true
+
 [node name="Global_Characters" parent="." instance=ExtResource("2_dl4dk")]
 position = Vector2(-20, -108)
-
-[node name="Mr Smiley Talk Panel" type="Panel" parent="Global_Characters"]
-offset_left = -145.0
-offset_top = -81.0
-offset_right = 145.0
-offset_bottom = 81.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_e1dbv")
-
-[node name="Sprite2D" type="Sprite2D" parent="Global_Characters/Mr Smiley Talk Panel"]
-position = Vector2(145.5, 59.5)
-scale = Vector2(2.34375, 2.34375)
-texture = ExtResource("8_e1dbv")
-
-[node name="Panel" type="Panel" parent="Global_Characters/Mr Smiley Talk Panel"]
-layout_mode = 0
-offset_left = 9.0
-offset_top = 112.0
-offset_right = 282.0
-offset_bottom = 152.0
-
-[node name="Label" type="Label" parent="Global_Characters/Mr Smiley Talk Panel/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Camera2D" type="Camera2D" parent="Global_Characters"]
-zoom = Vector2(4, 4)
 
 [node name="HUD" type="Panel" parent="Global_Characters"]
 offset_left = -145.0
@@ -452,23 +441,53 @@ theme_override_font_sizes/font_size = 50
 text = "x"
 horizontal_alignment = 1
 
-[node name="Title" type="Label" parent="."]
-offset_left = -35.999996
-offset_top = -90.0
-offset_right = 271.0
-offset_bottom = 43.0
-scale = Vector2(0.30313924, 0.33067)
+[node name="Mr Smiley Talk Panel" type="Panel" parent="Global_Characters"]
+offset_left = -145.0
+offset_top = -81.0
+offset_right = 145.0
+offset_bottom = 81.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1dbv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Global_Characters/Mr Smiley Talk Panel"]
+position = Vector2(145.5, 59.5)
+scale = Vector2(2.34375, 2.34375)
+texture = ExtResource("8_e1dbv")
+
+[node name="Panel" type="Panel" parent="Global_Characters/Mr Smiley Talk Panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 112.0
+offset_right = 282.0
+offset_bottom = 152.0
+
+[node name="Label" type="Label" parent="Global_Characters/Mr Smiley Talk Panel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.5
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3268316, 0.29837593)
 theme_override_fonts/font = ExtResource("14_15son")
 theme_override_font_sizes/font_size = 50
-text = "Dormant
-Grasslands"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("15_truun")
+text = " test text"
+script = ExtResource("17_ir0mu")
 
-[node name="Timer" type="Timer" parent="Title"]
-wait_time = 0.1
-autostart = true
+[node name="Button" type="Button" parent="Global_Characters/Mr Smiley Talk Panel/Panel"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 20.0
+offset_right = 288.0
+offset_bottom = 93.0
+scale = Vector2(0.46767887, 0.25120452)
+theme_override_fonts/font = ExtResource("14_15son")
+theme_override_font_sizes/font_size = 50
+text = ">"
+
+[node name="Camera2D" type="Camera2D" parent="Global_Characters"]
+zoom = Vector2(4, 4)
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -529,6 +548,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ir0mu")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_ir0mu")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ir0mu")
 
+[connection signal="pressed" from="Global_Characters/Mr Smiley Talk Panel/Panel/Button" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="MrSmiley Event/Button" to="." method="_on_mr_smiley_pressed"]
 
 [editable path="Spikes/Spikes2"]
