@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=67 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Script" uid="uid://eoll4j6ft2ul" path="res://Scripts/dormant_grasslands.gd" id="1_e1dbv"]
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
@@ -19,6 +19,14 @@
 [ext_resource type="Script" uid="uid://d4g044ubycgkv" path="res://Scripts/title_dormant.gd" id="15_truun"]
 [ext_resource type="PackedScene" uid="uid://b5vh65i38tk5k" path="res://Scenes/Objects/platform.tscn" id="17_b31i3"]
 [ext_resource type="Script" uid="uid://disqhljkus1q" path="res://Scenes/Levels/mr_smiley_text.gd" id="17_ir0mu"]
+[ext_resource type="Texture2D" uid="uid://b3h1d4e0om2sy" path="res://Assets/Cards/Pablo_Card.png" id="18_qymb5"]
+[ext_resource type="Texture2D" uid="uid://vtd6t4q442sv" path="res://Assets/Cards/Mr_Smiley_Card.png" id="19_poxwf"]
+[ext_resource type="Texture2D" uid="uid://bqmncmkrc25j8" path="res://Assets/Cards/Donut_Card.png" id="20_0ca2e"]
+[ext_resource type="Texture2D" uid="uid://r0psqrpljgpw" path="res://Assets/Cards/William_Card.png" id="21_cpo1y"]
+[ext_resource type="Texture2D" uid="uid://c6ref3hbvif4e" path="res://Assets/Cards/Mega_Pablo_Card.png" id="22_cw1uh"]
+[ext_resource type="Texture2D" uid="uid://cib7q83vowd5l" path="res://Assets/Cards/Speed_Card.png" id="23_evpae"]
+[ext_resource type="Texture2D" uid="uid://dfgjsacnh2fnb" path="res://Assets/Cards/Paul_Card.png" id="24_75dln"]
+[ext_resource type="Texture2D" uid="uid://c05k3dps526bx" path="res://Assets/Cards/Slime_Card.png" id="25_64ahh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ihv"]
 texture = ExtResource("1_epmka")
@@ -357,6 +365,9 @@ animations = [{
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1dbv"]
 bg_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qr822"]
+bg_color = Color(0.89492244, 0.89492244, 0.8949224, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir0mu"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
@@ -533,6 +544,79 @@ offset_left = -144.0
 offset_top = -81.0
 offset_right = 144.0
 offset_bottom = 81.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qr822")
+
+[node name="PabloCard" type="TextureRect" parent="Global_Characters/Characters"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 6.0
+offset_right = 77.0
+offset_bottom = 81.090904
+texture = ExtResource("18_qymb5")
+expand_mode = 1
+
+[node name="MrSmileyCard" type="TextureRect" parent="Global_Characters/Characters"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 84.0
+offset_right = 77.0
+offset_bottom = 159.09091
+texture = ExtResource("19_poxwf")
+expand_mode = 1
+
+[node name="DonutCard" type="TextureRect" parent="Global_Characters/Characters"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 84.0
+offset_right = 141.0
+offset_bottom = 159.09091
+texture = ExtResource("20_0ca2e")
+expand_mode = 1
+
+[node name="WarriorCard" type="TextureRect" parent="Global_Characters/Characters"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 84.0
+offset_right = 205.0
+offset_bottom = 159.09091
+texture = ExtResource("21_cpo1y")
+expand_mode = 1
+
+[node name="MegaPabloCard" type="TextureRect" parent="Global_Characters/Characters"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 84.0
+offset_right = 269.0
+offset_bottom = 159.09091
+texture = ExtResource("22_cw1uh")
+expand_mode = 1
+
+[node name="SpeedCard" type="TextureRect" parent="Global_Characters/Characters"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 6.0
+offset_right = 141.0
+offset_bottom = 81.090904
+texture = ExtResource("23_evpae")
+expand_mode = 1
+
+[node name="PaulCard" type="TextureRect" parent="Global_Characters/Characters"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 6.0
+offset_right = 205.0
+offset_bottom = 81.090904
+texture = ExtResource("24_75dln")
+expand_mode = 1
+
+[node name="SlimeCard" type="TextureRect" parent="Global_Characters/Characters"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 6.0
+offset_right = 269.0
+offset_bottom = 81.090904
+texture = ExtResource("25_64ahh")
+expand_mode = 1
 
 [node name="Platforms" type="Node" parent="."]
 
