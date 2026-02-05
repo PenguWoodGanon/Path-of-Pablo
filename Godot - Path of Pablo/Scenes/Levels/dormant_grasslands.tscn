@@ -442,6 +442,7 @@ text = "x"
 horizontal_alignment = 1
 
 [node name="Mr Smiley Talk Panel" type="Panel" parent="Global_Characters"]
+visible = false
 offset_left = -145.0
 offset_top = -81.0
 offset_right = 145.0
@@ -460,19 +461,57 @@ offset_top = 112.0
 offset_right = 282.0
 offset_bottom = 152.0
 
-[node name="Label" type="Label" parent="Global_Characters/Mr Smiley Talk Panel/Panel"]
+[node name="text1" type="Label" parent="Global_Characters/Mr Smiley Talk Panel/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -0.5
-offset_bottom = 24.5
+offset_left = 4.9999695
+offset_top = 3.0
+offset_right = 320.0
+offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3268316, 0.29837593)
 theme_override_fonts/font = ExtResource("14_15son")
 theme_override_font_sizes/font_size = 50
-text = " test text"
+text = "Hello! I'm Mr. Smiley!!!"
+script = ExtResource("17_ir0mu")
+
+[node name="text2" type="Label" parent="Global_Characters/Mr Smiley Talk Panel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.9999695
+offset_top = 0.50231934
+offset_right = 545.87476
+offset_bottom = 85.50232
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3268316, 0.29837593)
+theme_override_fonts/font = ExtResource("14_15son")
+theme_override_font_sizes/font_size = 47
+text = "Would you like me to help
+you on your quest?"
+script = ExtResource("17_ir0mu")
+
+[node name="text3" type="Label" parent="Global_Characters/Mr Smiley Talk Panel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.9999695
+offset_top = 0.50231934
+offset_right = 545.87476
+offset_bottom = 85.50232
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3268316, 0.29837593)
+theme_override_fonts/font = ExtResource("14_15son")
+theme_override_font_sizes/font_size = 47
+text = "Great! Press C to see your
+characters!"
 script = ExtResource("17_ir0mu")
 
 [node name="Button" type="Button" parent="Global_Characters/Mr Smiley Talk Panel/Panel"]
