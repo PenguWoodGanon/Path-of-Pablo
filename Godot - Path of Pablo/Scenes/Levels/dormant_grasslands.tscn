@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=68 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Script" uid="uid://eoll4j6ft2ul" path="res://Scripts/dormant_grasslands.gd" id="1_e1dbv"]
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b3h1d4e0om2sy" path="res://Assets/Cards/Pablo_Card.png" id="18_qymb5"]
 [ext_resource type="Texture2D" uid="uid://vtd6t4q442sv" path="res://Assets/Cards/Mr_Smiley_Card.png" id="19_poxwf"]
 [ext_resource type="Texture2D" uid="uid://bqmncmkrc25j8" path="res://Assets/Cards/Donut_Card.png" id="20_0ca2e"]
+[ext_resource type="Texture2D" uid="uid://bxcwj3gqn3xhm" path="res://Assets/Icons/padlock.svg" id="20_poxwf"]
 [ext_resource type="Texture2D" uid="uid://r0psqrpljgpw" path="res://Assets/Cards/William_Card.png" id="21_cpo1y"]
 [ext_resource type="Texture2D" uid="uid://c6ref3hbvif4e" path="res://Assets/Cards/Mega_Pablo_Card.png" id="22_cw1uh"]
 [ext_resource type="Texture2D" uid="uid://cib7q83vowd5l" path="res://Assets/Cards/Speed_Card.png" id="23_evpae"]
@@ -564,6 +565,27 @@ offset_bottom = 159.09091
 texture = ExtResource("19_poxwf")
 expand_mode = 1
 
+[node name="LOCKED" type="Panel" parent="Global_Characters/Characters/MrSmileyCard"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 75.0
+
+[node name="Lock" type="TextureRect" parent="Global_Characters/Characters/MrSmileyCard/LOCKED"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.5
+offset_top = -8.5
+offset_right = 8.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_poxwf")
+expand_mode = 1
+
 [node name="DonutCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
 offset_left = 82.0
@@ -571,6 +593,27 @@ offset_top = 84.0
 offset_right = 141.0
 offset_bottom = 159.09091
 texture = ExtResource("20_0ca2e")
+expand_mode = 1
+
+[node name="LOCKED2" type="Panel" parent="Global_Characters/Characters/DonutCard"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 75.0
+
+[node name="Lock" type="TextureRect" parent="Global_Characters/Characters/DonutCard/LOCKED2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.5
+offset_top = -8.5
+offset_right = 8.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_poxwf")
 expand_mode = 1
 
 [node name="WarriorCard" type="TextureRect" parent="Global_Characters/Characters"]
@@ -582,6 +625,27 @@ offset_bottom = 159.09091
 texture = ExtResource("21_cpo1y")
 expand_mode = 1
 
+[node name="LOCKED3" type="Panel" parent="Global_Characters/Characters/WarriorCard"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 75.0
+
+[node name="Lock" type="TextureRect" parent="Global_Characters/Characters/WarriorCard/LOCKED3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.5
+offset_top = -8.5
+offset_right = 8.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_poxwf")
+expand_mode = 1
+
 [node name="MegaPabloCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
 offset_left = 210.0
@@ -589,6 +653,27 @@ offset_top = 84.0
 offset_right = 269.0
 offset_bottom = 159.09091
 texture = ExtResource("22_cw1uh")
+expand_mode = 1
+
+[node name="LOCKED4" type="Panel" parent="Global_Characters/Characters/MegaPabloCard"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 75.0
+
+[node name="Lock" type="TextureRect" parent="Global_Characters/Characters/MegaPabloCard/LOCKED4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.5
+offset_top = -8.5
+offset_right = 8.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_poxwf")
 expand_mode = 1
 
 [node name="SpeedCard" type="TextureRect" parent="Global_Characters/Characters"]
@@ -600,6 +685,27 @@ offset_bottom = 81.090904
 texture = ExtResource("23_evpae")
 expand_mode = 1
 
+[node name="LOCKED5" type="Panel" parent="Global_Characters/Characters/SpeedCard"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 75.0
+
+[node name="Lock" type="TextureRect" parent="Global_Characters/Characters/SpeedCard/LOCKED5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.5
+offset_top = -8.5
+offset_right = 8.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_poxwf")
+expand_mode = 1
+
 [node name="PaulCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
 offset_left = 146.0
@@ -609,6 +715,27 @@ offset_bottom = 81.090904
 texture = ExtResource("24_75dln")
 expand_mode = 1
 
+[node name="LOCKED6" type="Panel" parent="Global_Characters/Characters/PaulCard"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 75.0
+
+[node name="Lock" type="TextureRect" parent="Global_Characters/Characters/PaulCard/LOCKED6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.5
+offset_top = -8.5
+offset_right = 8.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_poxwf")
+expand_mode = 1
+
 [node name="SlimeCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
 offset_left = 210.0
@@ -616,6 +743,27 @@ offset_top = 6.0
 offset_right = 269.0
 offset_bottom = 81.090904
 texture = ExtResource("25_64ahh")
+expand_mode = 1
+
+[node name="LOCKED7" type="Panel" parent="Global_Characters/Characters/SlimeCard"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 75.0
+
+[node name="Lock" type="TextureRect" parent="Global_Characters/Characters/SlimeCard/LOCKED7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.5
+offset_top = -8.5
+offset_right = 8.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_poxwf")
 expand_mode = 1
 
 [node name="Platforms" type="Node" parent="."]

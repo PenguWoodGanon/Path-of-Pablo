@@ -98,6 +98,7 @@ func _physics_process(delta):
 				anim_sprite.play("slime_idle")
 			if Global.char_donut == true:
 				anim_sprite.play("donut_idle")
+				Global.health = 4
 		# Speed's speed
 		if Global.char_speed == true:
 			SPEED = 400
