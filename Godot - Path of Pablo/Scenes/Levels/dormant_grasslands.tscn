@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=69 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Script" uid="uid://eoll4j6ft2ul" path="res://Scripts/dormant_grasslands.gd" id="1_e1dbv"]
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://d4g044ubycgkv" path="res://Scripts/title_dormant.gd" id="15_truun"]
 [ext_resource type="PackedScene" uid="uid://b5vh65i38tk5k" path="res://Scenes/Objects/platform.tscn" id="17_b31i3"]
 [ext_resource type="Script" uid="uid://disqhljkus1q" path="res://Scenes/Levels/mr_smiley_text.gd" id="17_ir0mu"]
+[ext_resource type="Script" uid="uid://dgxerawuao2fv" path="res://Scripts/characters_select.gd" id="18_0ca2e"]
 [ext_resource type="Texture2D" uid="uid://b3h1d4e0om2sy" path="res://Assets/Cards/Pablo_Card.png" id="18_qymb5"]
 [ext_resource type="Texture2D" uid="uid://vtd6t4q442sv" path="res://Assets/Cards/Mr_Smiley_Card.png" id="19_poxwf"]
 [ext_resource type="Texture2D" uid="uid://bqmncmkrc25j8" path="res://Assets/Cards/Donut_Card.png" id="20_0ca2e"]
@@ -546,6 +547,7 @@ offset_top = -81.0
 offset_right = 144.0
 offset_bottom = 81.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qr822")
+script = ExtResource("18_0ca2e")
 
 [node name="PabloCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0

@@ -8,6 +8,15 @@ var char_knight = false
 var char_paul = false
 var char_slime = false
 var char_donut = false
+
+var mrsmiley_unlocked = false
+var speed_unlocked = false
+var megapablo_unlocked = false
+var knight_unlocked = false
+var paul_unlocked = false
+var slime_unlocked = false
+var donut_unlocked = false
+
 var health = 4
 var coins = 0
 var cursortower = false

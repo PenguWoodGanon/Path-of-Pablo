@@ -66,6 +66,7 @@ func mr_smiley_talk():
 	mr_smiley_button.visible = false
 	hud.visible = false
 	Global.char_move = false
+	Global.mrsmiley_unlocked = true
 
 
 func _on_next_pressed():
