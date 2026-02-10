@@ -71,3 +71,7 @@ func mr_smiley_talk():
 
 func _on_next_pressed():
 	numtalk += 1
+
+
+func _on_slime_pressed():
+	pass # Replace with function body.

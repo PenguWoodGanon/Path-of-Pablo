@@ -31,3 +31,75 @@ func _process(_delta):
 		print("Game Over")
 		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 		health = 4
+	if char_pablo == true:
+		char_pablo = true
+		char_mrsmiley = false
+		char_speed = false
+		char_megapablo = false
+		char_knight = false
+		char_paul = false
+		char_slime = false
+		char_donut = false
+	if char_mrsmiley == true:
+		char_pablo = false
+		char_mrsmiley = true
+		char_speed = false
+		char_megapablo = false
+		char_knight = false
+		char_paul = false
+		char_slime = false
+		char_donut = false
+	if char_speed == true:
+		char_pablo = false
+		char_mrsmiley = false
+		char_speed = true
+		char_megapablo = false
+		char_knight = false
+		char_paul = false
+		char_slime = false
+		char_donut = false
+	if char_megapablo == true:
+		char_pablo = false
+		char_mrsmiley = false
+		char_speed = true
+		char_megapablo = false
+		char_knight = false
+		char_paul = false
+		char_slime = false
+		char_donut = false
+	if char_knight == true:
+		char_pablo = false
+		char_mrsmiley = false
+		char_speed = false
+		char_megapablo = false
+		char_knight = true
+		char_paul = false
+		char_slime = false
+		char_donut = false
+	if char_paul == true:
+		char_pablo = false
+		char_mrsmiley = false
+		char_speed = false
+		char_megapablo = false
+		char_knight = false
+		char_paul = true
+		char_slime = false
+		char_donut = false
+	if char_slime == true:
+		char_pablo = false
+		char_mrsmiley = false
+		char_speed = false
+		char_megapablo = false
+		char_knight = false
+		char_paul = false
+		char_slime = true
+		char_donut = false
+	if char_donut == true:
+		char_pablo = false
+		char_mrsmiley = false
+		char_speed = false
+		char_megapablo = false
+		char_knight = false
+		char_paul = false
+		char_slime = false
+		char_donut = true

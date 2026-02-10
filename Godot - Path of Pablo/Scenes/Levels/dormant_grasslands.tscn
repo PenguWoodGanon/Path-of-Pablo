@@ -368,13 +368,27 @@ animations = [{
 bg_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qr822"]
-bg_color = Color(0.89492244, 0.89492244, 0.8949224, 1)
+bg_color = Color(0.37036434, 0.37036452, 0.37036446, 0.6431373)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir0mu"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Dormant Grasslands" type="Node2D"]
 script = ExtResource("1_e1dbv")
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Spikes2" parent="Spikes" instance=ExtResource("15_b6t1p")]
+position = Vector2(272, -9)
+
+[node name="DestinationPoint" parent="Spikes/Spikes2" index="2"]
+position = Vector2(-83, -35)
+
+[node name="Spikes" parent="Spikes" instance=ExtResource("15_b6t1p")]
+position = Vector2(240, -9)
+
+[node name="DestinationPoint" parent="Spikes/Spikes" index="2"]
+position = Vector2(-51, -35)
 
 [node name="Tiles" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_xm3p5")
@@ -558,6 +572,15 @@ offset_bottom = 81.090904
 texture = ExtResource("18_qymb5")
 expand_mode = 1
 
+[node name="Button" type="Button" parent="Global_Characters/Characters/PabloCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
 [node name="MrSmileyCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
 offset_left = 18.0
@@ -587,6 +610,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("20_poxwf")
 expand_mode = 1
+
+[node name="Button" type="Button" parent="Global_Characters/Characters/MrSmileyCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
 
 [node name="DonutCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
@@ -618,6 +650,15 @@ grow_vertical = 2
 texture = ExtResource("20_poxwf")
 expand_mode = 1
 
+[node name="Button" type="Button" parent="Global_Characters/Characters/DonutCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
 [node name="WarriorCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
 offset_left = 146.0
@@ -647,6 +688,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("20_poxwf")
 expand_mode = 1
+
+[node name="Button" type="Button" parent="Global_Characters/Characters/WarriorCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
 
 [node name="MegaPabloCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
@@ -678,6 +728,15 @@ grow_vertical = 2
 texture = ExtResource("20_poxwf")
 expand_mode = 1
 
+[node name="Button" type="Button" parent="Global_Characters/Characters/MegaPabloCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
 [node name="SpeedCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
 offset_left = 82.0
@@ -707,6 +766,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("20_poxwf")
 expand_mode = 1
+
+[node name="Button" type="Button" parent="Global_Characters/Characters/SpeedCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
 
 [node name="PaulCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
@@ -738,6 +806,15 @@ grow_vertical = 2
 texture = ExtResource("20_poxwf")
 expand_mode = 1
 
+[node name="Button" type="Button" parent="Global_Characters/Characters/PaulCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
 [node name="SlimeCard" type="TextureRect" parent="Global_Characters/Characters"]
 layout_mode = 0
 offset_left = 210.0
@@ -768,6 +845,15 @@ grow_vertical = 2
 texture = ExtResource("20_poxwf")
 expand_mode = 1
 
+[node name="Button" type="Button" parent="Global_Characters/Characters/SlimeCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Platform" parent="Platforms" instance=ExtResource("17_b31i3")]
@@ -785,20 +871,6 @@ position = Vector2(-20, -322)
 [node name="Platform5" parent="Platforms" instance=ExtResource("17_b31i3")]
 position = Vector2(-50, -322)
 scale = Vector2(0.83366865, 1.027253)
-
-[node name="Spikes" type="Node" parent="."]
-
-[node name="Spikes2" parent="Spikes" instance=ExtResource("15_b6t1p")]
-position = Vector2(272, -9)
-
-[node name="DestinationPoint" parent="Spikes/Spikes2" index="2"]
-position = Vector2(-83, -35)
-
-[node name="Spikes" parent="Spikes" instance=ExtResource("15_b6t1p")]
-position = Vector2(240, -9)
-
-[node name="DestinationPoint" parent="Spikes/Spikes" index="2"]
-position = Vector2(-51, -35)
 
 [node name="MrSmiley Event" type="Node" parent="."]
 
@@ -828,6 +900,14 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_ir0mu")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ir0mu")
 
 [connection signal="pressed" from="Global_Characters/Mr Smiley Talk Panel/Panel/Button" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Global_Characters/Characters/PabloCard/Button" to="Global_Characters/Characters" method="_on_pablo_pressed"]
+[connection signal="pressed" from="Global_Characters/Characters/MrSmileyCard/Button" to="Global_Characters/Characters" method="_on_button_pressed"]
+[connection signal="pressed" from="Global_Characters/Characters/DonutCard/Button" to="Global_Characters/Characters" method="_on_donut_pressed"]
+[connection signal="pressed" from="Global_Characters/Characters/WarriorCard/Button" to="Global_Characters/Characters" method="_on_warrior_pressed"]
+[connection signal="pressed" from="Global_Characters/Characters/MegaPabloCard/Button" to="Global_Characters/Characters" method="_on_megapablo_pressed"]
+[connection signal="pressed" from="Global_Characters/Characters/SpeedCard/Button" to="Global_Characters/Characters" method="_on_speed_pressed"]
+[connection signal="pressed" from="Global_Characters/Characters/PaulCard/Button" to="Global_Characters/Characters" method="_on_paul_pressed"]
+[connection signal="pressed" from="Global_Characters/Characters/SlimeCard/Button" to="Global_Characters/Characters" method="_on_slime_pressed"]
 [connection signal="pressed" from="MrSmiley Event/Button" to="." method="_on_mr_smiley_pressed"]
 
 [editable path="Spikes/Spikes2"]
