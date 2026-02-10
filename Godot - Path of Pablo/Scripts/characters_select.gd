@@ -24,7 +24,7 @@ func _on_button_pressed():
 
 #Pablo Button
 func _on_pablo_pressed():
-		Global.char_pablo = false
+		Global.char_pablo = true
 		Global.char_mrsmiley = false
 		Global.char_speed = false
 		Global.char_megapablo = false
