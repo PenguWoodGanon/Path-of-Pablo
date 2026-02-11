@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nkys2")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Biomes" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -26,7 +26,7 @@ offset_bottom = 277.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Biomes_Title" type="Label" parent="Panel"]
+[node name="Biomes_Title" type="Label" parent="Biomes"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -42,7 +42,7 @@ theme_override_font_sizes/font_size = 100
 text = "Biomes"
 horizontal_alignment = 1
 
-[node name="dormgrass" type="Button" parent="Panel"]
+[node name="dormgrass" type="Button" parent="Biomes"]
 layout_mode = 0
 offset_left = 86.0
 offset_top = 102.0
@@ -50,4 +50,4 @@ offset_right = 253.0
 offset_bottom = 133.0
 text = "Dormant Grasslands"
 
-[connection signal="pressed" from="Panel/dormgrass" to="." method="_on_dormgrass_pressed"]
+[connection signal="pressed" from="Biomes/dormgrass" to="." method="_on_dormgrass_pressed"]
