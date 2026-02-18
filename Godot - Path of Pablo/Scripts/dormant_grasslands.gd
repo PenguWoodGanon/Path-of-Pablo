@@ -44,6 +44,7 @@ func _process(_delta):
 		text_2.visible = false
 		text_3.visible = false
 		mr_smiley_talk_panel.visible = false
+		hud.visible = true
 		Global.char_move = true
 	if Input.is_action_just_pressed("character_selection"):
 		if cpressed == false:
