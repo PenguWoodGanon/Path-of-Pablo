@@ -15,6 +15,7 @@ var key_collected = false
 @onready var text_3 = $"Global_Characters/Mr Smiley Talk Panel/Panel/text3"
 @onready var characters = $Global_Characters/Characters
 @onready var key = $Key
+@onready var door_animation_player = $Door/AnimationPlayer
 
 
 func _ready():
@@ -83,3 +84,8 @@ func _on_next_pressed():
 func _on_key_entered(_body: PhysicsBody2D):
 	key_collected = true
 	print(key_collected)
+
+
+func _on_door_pressed():
+	if key_collected == true:
+		door_animation_player.play("unlock")

@@ -21,14 +21,14 @@ theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 27
 text = "New Game"
 
-[node name="DLC" type="Button" parent="."]
+[node name="Lore" type="Button" parent="."]
 layout_mode = 0
 offset_top = 305.0
 offset_right = 348.0
 offset_bottom = 377.5
 theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 27
-text = "DLC"
+text = "Lore"
 
 [node name="Settings" type="Button" parent="."]
 layout_mode = 0
@@ -49,5 +49,4 @@ theme_override_font_sizes/font_size = 27
 text = "Quit Game"
 
 [connection signal="pressed" from="New Game" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="DLC" to="." method="_on_dlc_pressed"]
 [connection signal="pressed" from="Quit Game" to="." method="_on_quit_game_pressed"]
