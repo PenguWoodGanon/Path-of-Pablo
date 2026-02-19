@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=76 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Script" uid="uid://eoll4j6ft2ul" path="res://Scripts/dormant_grasslands.gd" id="1_e1dbv"]
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://dfgjsacnh2fnb" path="res://Assets/Cards/Paul_Card.png" id="24_75dln"]
 [ext_resource type="Texture2D" uid="uid://c05k3dps526bx" path="res://Assets/Cards/Slime_Card.png" id="25_64ahh"]
 [ext_resource type="Texture2D" uid="uid://c6pewaobofi0k" path="res://Assets/Icons/key_small3.png" id="30_cpo1y"]
+[ext_resource type="Texture2D" uid="uid://cuquow86rmh3b" path="res://Assets/Other/door.png" id="31_cw1uh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ihv"]
 texture = ExtResource("1_epmka")
@@ -376,6 +377,69 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cw1uh"]
 size = Vector2(16, 7.1111145)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evpae"]
+size = Vector2(32, 64)
+
+[sub_resource type="Animation" id="Animation_75dln"]
+resource_name = "unlock"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 72)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Padlock:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_64ahh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Padlock:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qr822"]
+_data = {
+&"RESET": SubResource("Animation_64ahh"),
+&"unlock": SubResource("Animation_75dln")
+}
 
 [node name="Dormant Grasslands" type="Node2D"]
 script = ExtResource("1_e1dbv")
@@ -919,6 +983,23 @@ region_rect = Rect2(1, 4, 15, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
 shape = SubResource("RectangleShape2D_cw1uh")
+
+[node name="Door" type="Sprite2D" parent="."]
+position = Vector2(624, -160)
+texture = ExtResource("31_cw1uh")
+
+[node name="Padlock" type="Sprite2D" parent="Door"]
+position = Vector2(-0.5, 0.49996948)
+scale = Vector2(0.04101549, 0.04101549)
+texture = ExtResource("20_poxwf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+shape = SubResource("RectangleShape2D_evpae")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door"]
+libraries = {
+&"": SubResource("AnimationLibrary_qr822")
+}
 
 [connection signal="pressed" from="Global_Characters/Mr Smiley Talk Panel/Panel/Button" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/PabloCard/Button" to="Global_Characters/Characters" method="_on_pablo_pressed"]

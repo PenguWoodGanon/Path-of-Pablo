@@ -14,6 +14,7 @@ var key_collected = false
 @onready var text_2 = $"Global_Characters/Mr Smiley Talk Panel/Panel/text2"
 @onready var text_3 = $"Global_Characters/Mr Smiley Talk Panel/Panel/text3"
 @onready var characters = $Global_Characters/Characters
+@onready var key = $Key
 
 
 func _ready():
@@ -26,6 +27,7 @@ func _ready():
 	text_2.visible = false
 	text_3.visible = false
 	characters.visible = false
+	key.visible = true
 
 func _process(_delta):
 	if numtalk == 0 and mr_smiley_pressed == true:
@@ -54,6 +56,8 @@ func _process(_delta):
 		elif cpressed == true:
 			characters.visible = false
 			cpressed = false
+	if key_collected == true:
+		key.visible = false
 
 func _on_mr_smiley_pressed():
 	mr_smiley_pressed = true
