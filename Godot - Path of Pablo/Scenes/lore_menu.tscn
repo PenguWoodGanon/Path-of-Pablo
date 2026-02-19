@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cs3dffa405ek3"]
+[gd_scene load_steps=2 format=3 uid="uid://cs3dffa405ek3"]
+
+[ext_resource type="FontFile" uid="uid://2iswwv0mx8lo" path="res://Assets/Audiowide-Regular.ttf" id="1_x8j1u"]
 
 [node name="Lore Menu" type="Control"]
 layout_mode = 3
@@ -7,3 +9,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 135.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_x8j1u")
+theme_override_font_sizes/font_size = 75
+text = "Lore"
+horizontal_alignment = 1
+vertical_alignment = 1
