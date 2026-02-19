@@ -4,6 +4,7 @@ var cpressed = false
 var talked = false
 var numtalk = 0
 var mr_smiley_pressed = false
+var key_collected = false
 @onready var mr_smiley_talk_panel = $"Global_Characters/Mr Smiley Talk Panel"
 @onready var mr_smiley = $"MrSmiley Event/MrSmiley"
 @onready var label = $"MrSmiley Event/Label"
@@ -74,5 +75,7 @@ func _on_next_pressed():
 	numtalk += 1
 
 
-func _on_slime_pressed():
-	pass # Replace with function body.
+
+func _on_key_entered(_body: PhysicsBody2D):
+	key_collected = true
+	print(key_collected)

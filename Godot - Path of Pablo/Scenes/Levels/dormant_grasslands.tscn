@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=71 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Script" uid="uid://eoll4j6ft2ul" path="res://Scripts/dormant_grasslands.gd" id="1_e1dbv"]
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://cib7q83vowd5l" path="res://Assets/Cards/Speed_Card.png" id="23_evpae"]
 [ext_resource type="Texture2D" uid="uid://dfgjsacnh2fnb" path="res://Assets/Cards/Paul_Card.png" id="24_75dln"]
 [ext_resource type="Texture2D" uid="uid://c05k3dps526bx" path="res://Assets/Cards/Slime_Card.png" id="25_64ahh"]
+[ext_resource type="Texture2D" uid="uid://c6pewaobofi0k" path="res://Assets/Icons/key_small3.png" id="30_cpo1y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ihv"]
 texture = ExtResource("1_epmka")
@@ -372,6 +373,9 @@ bg_color = Color(0.37036434, 0.37036452, 0.37036446, 0.6431373)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir0mu"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cw1uh"]
+size = Vector2(16, 7.1111145)
 
 [node name="Dormant Grasslands" type="Node2D"]
 script = ExtResource("1_e1dbv")
@@ -854,29 +858,6 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 
-[node name="Platforms" type="Node" parent="."]
-
-[node name="Platform2" parent="Platforms" instance=ExtResource("17_b31i3")]
-position = Vector2(46, -322)
-
-[node name="Platform3" parent="Platforms" instance=ExtResource("17_b31i3")]
-position = Vector2(13, -322)
-
-[node name="Platform4" parent="Platforms" instance=ExtResource("17_b31i3")]
-position = Vector2(-20, -322)
-
-[node name="Platform5" parent="Platforms" instance=ExtResource("17_b31i3")]
-position = Vector2(-50, -322)
-scale = Vector2(0.83366865, 1.027253)
-
-[node name="Platform6" parent="Platforms" instance=ExtResource("17_b31i3")]
-position = Vector2(430.00003, -445)
-scale = Vector2(0.83366865, 1.027253)
-
-[node name="Platform7" parent="Platforms" instance=ExtResource("17_b31i3")]
-position = Vector2(594.00006, -566)
-scale = Vector2(0.83366865, 1.027253)
-
 [node name="MrSmiley Event" type="Node" parent="."]
 
 [node name="MrSmiley" type="Sprite2D" parent="MrSmiley Event"]
@@ -904,6 +885,41 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ir0mu")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_ir0mu")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ir0mu")
 
+[node name="Platforms" type="Node" parent="."]
+
+[node name="Platform2" parent="Platforms" instance=ExtResource("17_b31i3")]
+position = Vector2(46, -322)
+
+[node name="Platform3" parent="Platforms" instance=ExtResource("17_b31i3")]
+position = Vector2(13, -322)
+
+[node name="Platform4" parent="Platforms" instance=ExtResource("17_b31i3")]
+position = Vector2(-20, -322)
+
+[node name="Platform5" parent="Platforms" instance=ExtResource("17_b31i3")]
+position = Vector2(-50, -322)
+scale = Vector2(0.83366865, 1.027253)
+
+[node name="Platform6" parent="Platforms" instance=ExtResource("17_b31i3")]
+position = Vector2(430.00003, -445)
+scale = Vector2(0.83366865, 1.027253)
+
+[node name="Platform7" parent="Platforms" instance=ExtResource("17_b31i3")]
+position = Vector2(594.00006, -566)
+scale = Vector2(0.83366865, 1.027253)
+
+[node name="Key" type="Area2D" parent="."]
+position = Vector2(720, -629)
+scale = Vector2(2.25, 2.25)
+
+[node name="Sprite" type="Sprite2D" parent="Key"]
+texture = ExtResource("30_cpo1y")
+region_enabled = true
+region_rect = Rect2(1, 4, 15, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
+shape = SubResource("RectangleShape2D_cw1uh")
+
 [connection signal="pressed" from="Global_Characters/Mr Smiley Talk Panel/Panel/Button" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/PabloCard/Button" to="Global_Characters/Characters" method="_on_pablo_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/MrSmileyCard/Button" to="Global_Characters/Characters" method="_on_button_pressed"]
@@ -914,6 +930,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_ir0mu")
 [connection signal="pressed" from="Global_Characters/Characters/PaulCard/Button" to="Global_Characters/Characters" method="_on_paul_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/SlimeCard/Button" to="Global_Characters/Characters" method="_on_slime_pressed"]
 [connection signal="pressed" from="MrSmiley Event/Button" to="." method="_on_mr_smiley_pressed"]
+[connection signal="body_entered" from="Key" to="." method="_on_key_entered"]
 
 [editable path="Spikes/Spikes2"]
 [editable path="Spikes/Spikes"]
