@@ -936,6 +936,7 @@ grow_vertical = 2
 flat = true
 
 [node name="Booster Pack" type="Panel" parent="Global_Characters"]
+visible = false
 offset_left = -144.0
 offset_top = -83.0
 offset_right = 145.0

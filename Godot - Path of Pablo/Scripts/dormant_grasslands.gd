@@ -5,6 +5,7 @@ var talked = false
 var numtalk = 0
 var mr_smiley_pressed = false
 var key_collected = false
+var bpressed = false
 @onready var mr_smiley_talk_panel = $"Global_Characters/Mr Smiley Talk Panel"
 @onready var mr_smiley = $"MrSmiley Event/MrSmiley"
 @onready var label = $"MrSmiley Event/Label"
@@ -17,6 +18,7 @@ var key_collected = false
 @onready var key = $Key
 @onready var door_animation_player = $Door/AnimationPlayer
 @onready var platform_6 = $Platforms/Platform6
+@onready var booster_pack = $"Global_Characters/Booster Pack"
 
 
 func _ready():
@@ -31,6 +33,7 @@ func _ready():
 	characters.visible = false
 	key.visible = true
 	platform_6.visible = true
+	booster_pack.visible = false
 
 func _process(_delta):
 	if numtalk == 0 and mr_smiley_pressed == true:
@@ -53,16 +56,27 @@ func _process(_delta):
 		mr_smiley_talk_panel.visible = false
 		hud.visible = true
 		Global.char_move = true
-		platform_6.visible = false
+		platform_6.visible = true
 	if Input.is_action_just_pressed("character_selection"):
 		if cpressed == false:
 			characters.visible = true
 			cpressed = true
+			Global.char_move = false
 		elif cpressed == true:
 			characters.visible = false
 			cpressed = false
+			Global.char_move = true
 	if key_collected == true:
 		key.visible = false
+	if Input.is_action_just_pressed("shop"):
+		if bpressed == false:
+			bpressed = true
+			booster_pack.visible = true
+			Global.char_move = false
+		elif bpressed == true:
+			bpressed = false
+			booster_pack.visible = false
+			Global.char_move = true
 
 func _on_mr_smiley_pressed():
 	mr_smiley_pressed = true
