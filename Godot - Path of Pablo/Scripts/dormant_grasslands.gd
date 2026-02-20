@@ -16,6 +16,7 @@ var key_collected = false
 @onready var characters = $Global_Characters/Characters
 @onready var key = $Key
 @onready var door_animation_player = $Door/AnimationPlayer
+@onready var platform_6 = $Platforms/Platform6
 
 
 func _ready():
@@ -29,12 +30,14 @@ func _ready():
 	text_3.visible = false
 	characters.visible = false
 	key.visible = true
+	platform_6.visible = true
 
 func _process(_delta):
 	if numtalk == 0 and mr_smiley_pressed == true:
 		text_1.visible = true
 		text_2.visible = false
 		text_3.visible = false
+		platform_6.visible = false
 	if numtalk == 1 and mr_smiley_pressed == true:
 		text_1.visible = false
 		text_2.visible = true
@@ -50,6 +53,7 @@ func _process(_delta):
 		mr_smiley_talk_panel.visible = false
 		hud.visible = true
 		Global.char_move = true
+		platform_6.visible = false
 	if Input.is_action_just_pressed("character_selection"):
 		if cpressed == false:
 			characters.visible = true
