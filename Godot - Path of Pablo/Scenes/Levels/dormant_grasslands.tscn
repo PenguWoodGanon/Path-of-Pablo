@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=79 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Script" uid="uid://eoll4j6ft2ul" path="res://Scripts/dormant_grasslands.gd" id="1_e1dbv"]
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
@@ -29,7 +29,9 @@
 [ext_resource type="Texture2D" uid="uid://cib7q83vowd5l" path="res://Assets/Cards/Speed_Card.png" id="23_evpae"]
 [ext_resource type="Texture2D" uid="uid://dfgjsacnh2fnb" path="res://Assets/Cards/Paul_Card.png" id="24_75dln"]
 [ext_resource type="Texture2D" uid="uid://c05k3dps526bx" path="res://Assets/Cards/Slime_Card.png" id="25_64ahh"]
+[ext_resource type="Texture2D" uid="uid://dsxkbc8y5apod" path="res://Assets/Cards/Booster_Pack.png" id="29_75dln"]
 [ext_resource type="Texture2D" uid="uid://c6pewaobofi0k" path="res://Assets/Icons/key_small3.png" id="30_cpo1y"]
+[ext_resource type="PackedScene" uid="uid://cdr1bv0oxq4ue" path="res://Scenes/Objects/coin.tscn" id="30_evpae"]
 [ext_resource type="Texture2D" uid="uid://cuquow86rmh3b" path="res://Assets/Other/door.png" id="31_cw1uh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ihv"]
@@ -372,6 +374,13 @@ bg_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qr822"]
 bg_color = Color(0.37036434, 0.37036452, 0.37036446, 0.6431373)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64ahh"]
+bg_color = Color(0.07025007, 0.5524928, 0.696899, 0.77254903)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir0mu"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
@@ -624,6 +633,7 @@ text = ">"
 zoom = Vector2(4, 4)
 
 [node name="Characters" type="Panel" parent="Global_Characters"]
+visible = false
 offset_left = -144.0
 offset_top = -81.0
 offset_right = 144.0
@@ -922,6 +932,44 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 
+[node name="Booster Pack" type="Panel" parent="Global_Characters"]
+offset_left = -144.0
+offset_top = -83.0
+offset_right = 145.0
+offset_bottom = 83.0
+
+[node name="BoosterPack" type="Sprite2D" parent="Global_Characters/Booster Pack"]
+position = Vector2(144, 83)
+scale = Vector2(1.625, 1.875)
+texture = ExtResource("29_75dln")
+region_enabled = true
+region_rect = Rect2(0, 27, 32, 37)
+
+[node name="TitlePanel" type="Panel" parent="Global_Characters/Booster Pack"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -133.5
+offset_top = 8.0
+offset_right = 133.5
+offset_bottom = 39.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_64ahh")
+
+[node name="Label" type="Label" parent="Global_Characters/Booster Pack/TitlePanel"]
+layout_mode = 1
+offset_left = 58.0
+offset_top = 2.0
+offset_right = 438.0
+offset_bottom = 67.0
+scale = Vector2(0.39052045, 0.3873474)
+theme_override_fonts/font = ExtResource("14_15son")
+theme_override_font_sizes/font_size = 50
+text = "Booster Pack"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="MrSmiley Event" type="Node" parent="."]
 
 [node name="MrSmiley" type="Sprite2D" parent="MrSmiley Event"]
@@ -971,6 +1019,53 @@ scale = Vector2(0.83366865, 1.027253)
 [node name="Platform7" parent="Platforms" instance=ExtResource("17_b31i3")]
 position = Vector2(594.00006, -566)
 scale = Vector2(0.83366865, 1.027253)
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(64, -16)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(189, -48)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(253.00003, -73.00001)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(321, -49.000008)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(524.00006, -85)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(420.00003, -213)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(255, -163.00002)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(127.000015, -275)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(39.000015, -275.00003)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(159, -403)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(567, -403)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(567, -531)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(767, -627)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(551, -675.00006)
+
+[node name="Coin15" parent="Coins" instance=ExtResource("30_evpae")]
+position = Vector2(592, -145)
 
 [node name="Key" type="Area2D" parent="."]
 position = Vector2(720, -629)
