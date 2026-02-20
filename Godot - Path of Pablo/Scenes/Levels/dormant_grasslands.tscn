@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=80 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Script" uid="uid://eoll4j6ft2ul" path="res://Scripts/dormant_grasslands.gd" id="1_e1dbv"]
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
@@ -380,6 +380,9 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75dln"]
+bg_color = Color(0, 0.85490197, 0.8627451, 0.6156863)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir0mu"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -969,6 +972,21 @@ theme_override_font_sizes/font_size = 50
 text = "Booster Pack"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Global_Characters/Booster Pack"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.5
+offset_top = -37.0
+offset_right = 40.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_75dln")
 
 [node name="MrSmiley Event" type="Node" parent="."]
 
