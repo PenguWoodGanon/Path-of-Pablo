@@ -494,7 +494,8 @@ wait_time = 0.1
 autostart = true
 
 [node name="Global_Characters" parent="." instance=ExtResource("2_dl4dk")]
-position = Vector2(-20, -108)
+position = Vector2(116, -72)
+slide_on_ceiling = false
 
 [node name="HUD" type="Panel" parent="Global_Characters"]
 offset_left = -145.0
