@@ -494,7 +494,7 @@ wait_time = 0.1
 autostart = true
 
 [node name="Global_Characters" parent="." instance=ExtResource("2_dl4dk")]
-position = Vector2(116, -72)
+position = Vector2(12, -96)
 slide_on_ceiling = false
 
 [node name="HUD" type="Panel" parent="Global_Characters"]
@@ -1131,6 +1131,19 @@ offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 flat = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -60.0
+offset_top = -47.0
+offset_right = 45.0
+offset_bottom = -24.0
+scale = Vector2(0.14902256, 0.14902256)
+theme_override_fonts/font = ExtResource("14_15son")
+theme_override_font_sizes/font_size = 50
+text = "Tap A then D 
+to Start."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Global_Characters/Mr Smiley Talk Panel/Panel/Button" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/PabloCard/Button" to="Global_Characters/Characters" method="_on_pablo_pressed"]
