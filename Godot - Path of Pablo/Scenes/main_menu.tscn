@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ca2ubj3avevtt"]
+[gd_scene load_steps=4 format=3 uid="uid://ca2ubj3avevtt"]
 
 [ext_resource type="Script" uid="uid://nwoxenj4k3b2" path="res://Scripts/main_menu.gd" id="1_48xlc"]
 [ext_resource type="FontFile" uid="uid://2iswwv0mx8lo" path="res://Assets/Audiowide-Regular.ttf" id="2_48xlc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+bg_color = Color(0.9845465, 0.9845466, 0.9845465, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,14 +28,14 @@ theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 27
 text = "New Game"
 
-[node name="Lore" type="Button" parent="."]
+[node name="Profile" type="Button" parent="."]
 layout_mode = 0
 offset_top = 305.0
 offset_right = 348.0
 offset_bottom = 377.5
 theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 27
-text = "Lore"
+text = "Profile"
 
 [node name="Settings" type="Button" parent="."]
 layout_mode = 0
@@ -48,5 +55,38 @@ theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 27
 text = "Quit Game"
 
+[node name="SettingsMenu" type="Node" parent="."]
+
+[node name="Darkener" type="Panel" parent="SettingsMenu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Settings Panel" type="Panel" parent="SettingsMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -334.0
+offset_top = -245.0
+offset_right = 334.0
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_48xlc")
+
+[node name="Button" type="Button" parent="SettingsMenu"]
+offset_left = 410.0
+offset_top = 488.0
+offset_right = 752.0
+offset_bottom = 556.0
+theme_override_fonts/font = ExtResource("2_48xlc")
+theme_override_font_sizes/font_size = 40
+text = "Erase Save Data"
+
 [connection signal="pressed" from="New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Profile" to="." method="_on_profile_pressed"]
 [connection signal="pressed" from="Quit Game" to="." method="_on_quit_game_pressed"]

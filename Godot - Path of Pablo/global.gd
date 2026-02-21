@@ -23,6 +23,9 @@ var cursortower = false
 var deluxe = false
 var char_move = true
 
+var save_path = "user://pathofpablo.save"
+var username = "N/A"
+
 func _process(_delta):
 	if health == 5:
 		health = 4
@@ -103,3 +106,29 @@ func _process(_delta):
 		char_paul = false
 		char_slime = false
 		char_donut = true
+
+func save():
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	if file:
+		file.store_var(coins)
+		file.store_var(username)
+		file.close()
+
+func load_data():
+	if FileAccess.file_exists(save_path):
+		var file = FileAccess.open(save_path, FileAccess.READ)
+		if file:
+			coins = file.get_var()
+			username = file.get_var()
+			file.close()
+	else:
+		print("No Save Data")
+
+func clear_data():
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	if file:
+		coins = 0
+		file.store_var(coins)
+		username = "N/A"
+		file.store_var(username)
+		file.close()

@@ -27,6 +27,10 @@ window/stretch/mode="canvas_items"
 
 player=""
 
+[gui]
+
+theme/custom_font="uid://2iswwv0mx8lo"
+
 [input]
 
 jump={
