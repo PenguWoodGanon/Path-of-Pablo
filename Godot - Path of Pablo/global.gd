@@ -25,6 +25,7 @@ var char_move = true
 
 var save_path = "user://pathofpablo.save"
 var username = "N/A"
+var game_unlocked = false
 
 func _process(_delta):
 	if health == 5:
@@ -112,6 +113,7 @@ func save():
 	if file:
 		file.store_var(coins)
 		file.store_var(username)
+		file.store_var(game_unlocked)
 		file.close()
 
 func load_data():
@@ -120,6 +122,7 @@ func load_data():
 		if file:
 			coins = file.get_var()
 			username = file.get_var()
+			game_unlocked = file.get_var()
 			file.close()
 	else:
 		print("No Save Data")

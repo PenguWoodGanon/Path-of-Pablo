@@ -5,6 +5,10 @@ extends Node2D
 
 var count := 0
 
+func _ready():
+	Global.load_data()
+	Global.save()
+
 func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
