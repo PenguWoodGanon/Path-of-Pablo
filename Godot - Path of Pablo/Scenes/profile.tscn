@@ -131,6 +131,17 @@ offset_top = 376.0
 offset_right = 736.0
 offset_bottom = 606.0
 
+[node name="Button" type="Button" parent="Save Slots/Save 1/Main"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "1"
+flat = true
+
 [node name="Save 2" type="Node" parent="Save Slots"]
 
 [node name="Main2" type="Panel" parent="Save Slots/Save 2"]
@@ -139,6 +150,17 @@ offset_top = 376.0
 offset_right = 930.0
 offset_bottom = 606.0
 
+[node name="Button2" type="Button" parent="Save Slots/Save 2/Main2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "2"
+flat = true
+
 [node name="Save 3" type="Node" parent="Save Slots"]
 
 [node name="Main3" type="Panel" parent="Save Slots/Save 3"]
@@ -146,6 +168,17 @@ offset_left = 942.0
 offset_top = 376.0
 offset_right = 1122.0
 offset_bottom = 606.0
+
+[node name="Button3" type="Button" parent="Save Slots/Save 3/Main3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "3"
+flat = true
 
 [node name="Label" type="Label" parent="Save Slots"]
 layout_mode = 1
@@ -161,3 +194,5 @@ vertical_alignment = 1
 [connection signal="pressed" from="Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="UsernamePick/Verify" to="." method="_on_verify_pressed"]
+[connection signal="pressed" from="Save Slots/Save 1/Main/Button" to="." method="_on_slot_1_pressed"]
+[connection signal="pressed" from="Save Slots/Save 2/Main2/Button2" to="." method="_on_slot_2_pressed"]

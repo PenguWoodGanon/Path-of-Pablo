@@ -37,3 +37,10 @@ func _on_load_pressed():
 func _on_verify_pressed():
 	Global.username = line_edit.text
 	update_ui()
+
+func _on_slot_1_pressed():
+	pass # Replace with function body.
+
+
+func _on_slot_2_pressed():
+	pass # Replace with function body.
