@@ -107,3 +107,7 @@ func _on_key_entered(_body: PhysicsBody2D):
 func _on_door_pressed():
 	if key_collected == true:
 		door_animation_player.play("unlock")
+
+
+func _on_button_pressed():
+	pass # Replace with function body.

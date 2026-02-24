@@ -19,6 +19,7 @@ var donut_unlocked = false
 
 var health = 4
 var coins = 0
+var total_coins = 0
 var cursortower = false
 var deluxe = false
 var char_move = true

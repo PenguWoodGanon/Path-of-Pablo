@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdj631u22swwv"]
+[gd_scene load_steps=4 format=3 uid="uid://bdj631u22swwv"]
 
 [ext_resource type="Script" uid="uid://ys0ahd0q237a" path="res://Scripts/profile.gd" id="1_ge2pj"]
 [ext_resource type="FontFile" uid="uid://2iswwv0mx8lo" path="res://Assets/Audiowide-Regular.ttf" id="2_b77ww"]
@@ -9,9 +9,6 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yml3r"]
-corner_radius_top_left = 10
 
 [node name="Profile" type="Control"]
 layout_mode = 3
@@ -111,88 +108,6 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_b77ww")
 theme_override_styles/focus = SubResource("StyleBoxFlat_b77ww")
 text = "Pick!"
 
-[node name="Save Slots" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 526.0
-offset_top = -358.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_yml3r")
-
-[node name="Save 1" type="Node" parent="Save Slots"]
-
-[node name="Main" type="Panel" parent="Save Slots/Save 1"]
-offset_left = 556.0
-offset_top = 376.0
-offset_right = 736.0
-offset_bottom = 606.0
-
-[node name="Button" type="Button" parent="Save Slots/Save 1/Main"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "1"
-flat = true
-
-[node name="Save 2" type="Node" parent="Save Slots"]
-
-[node name="Main2" type="Panel" parent="Save Slots/Save 2"]
-offset_left = 750.0
-offset_top = 376.0
-offset_right = 930.0
-offset_bottom = 606.0
-
-[node name="Button2" type="Button" parent="Save Slots/Save 2/Main2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "2"
-flat = true
-
-[node name="Save 3" type="Node" parent="Save Slots"]
-
-[node name="Main3" type="Panel" parent="Save Slots/Save 3"]
-offset_left = 942.0
-offset_top = 376.0
-offset_right = 1122.0
-offset_bottom = 606.0
-
-[node name="Button3" type="Button" parent="Save Slots/Save 3/Main3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "3"
-flat = true
-
-[node name="Label" type="Label" parent="Save Slots"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 83.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 50
-text = "Save Slots"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [connection signal="pressed" from="Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="UsernamePick/Verify" to="." method="_on_verify_pressed"]
-[connection signal="pressed" from="Save Slots/Save 1/Main/Button" to="." method="_on_slot_1_pressed"]
-[connection signal="pressed" from="Save Slots/Save 2/Main2/Button2" to="." method="_on_slot_2_pressed"]
