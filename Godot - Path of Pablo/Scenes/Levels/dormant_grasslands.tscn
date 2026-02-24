@@ -375,21 +375,6 @@ bg_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qr822"]
 bg_color = Color(0.37036434, 0.37036452, 0.37036446, 0.6431373)
 
-[sub_resource type="Animation" id="Animation_qr822"]
-resource_name = "spin"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 6.2831855]
-}
-
 [sub_resource type="Animation" id="Animation_6syfq"]
 length = 0.001
 tracks/0/type = "value"
@@ -403,6 +388,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qr822"]
+resource_name = "spin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
 }
 
 [sub_resource type="Animation" id="Animation_xnjv2"]
@@ -1252,6 +1252,8 @@ scale = Vector2(0.08555555, 0.085555576)
 texture = ExtResource("22_cw1uh")
 
 [node name="Timer" type="Timer" parent="Global_Characters/Booster Pack/Cards"]
+wait_time = 1.5
+one_shot = true
 
 [node name="MrSmiley Event" type="Node" parent="."]
 
