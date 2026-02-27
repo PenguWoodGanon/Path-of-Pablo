@@ -6,6 +6,8 @@ var numtalk = 0
 var mr_smiley_pressed = false
 var key_collected = false
 var bpressed = false
+var speedrun_time = 0
+var game_done = false
 @onready var mr_smiley_talk_panel = $"Global_Characters/Mr Smiley Talk Panel"
 @onready var mr_smiley = $"MrSmiley Event/MrSmiley"
 @onready var label = $"MrSmiley Event/Label"
@@ -19,6 +21,7 @@ var bpressed = false
 @onready var door_animation_player = $Door/AnimationPlayer
 @onready var platform_6 = $Platforms/Platform6
 @onready var booster_pack = $"Global_Characters/Booster Pack"
+@onready var speedrun_timer = $"Speedrun Timer"
 
 
 func _ready():
@@ -111,3 +114,8 @@ func _on_door_pressed():
 
 func _on_button_pressed():
 	pass # Replace with function body.
+
+
+func _on_speedrun_timer_timeout():
+	if game_done == false:
+		speedrun_time += 1

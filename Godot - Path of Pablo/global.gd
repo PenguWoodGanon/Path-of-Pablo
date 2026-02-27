@@ -23,6 +23,7 @@ var total_coins = 0
 var cursortower = false
 var deluxe = false
 var char_move = true
+var time_speedrun = 0
 
 var save_path = "user://pathofpablo.save"
 var username = "N/A"
