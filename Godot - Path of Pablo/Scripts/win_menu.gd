@@ -14,3 +14,9 @@ func _ready():
 	Global.save()
 	Global.levels_beaten += 1
 	$Coins.text = str("Coins Collected : ", Global.coins)
+
+
+func _on_finish_pressed():
+	Global.coins = 0
+	Global.save()
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
