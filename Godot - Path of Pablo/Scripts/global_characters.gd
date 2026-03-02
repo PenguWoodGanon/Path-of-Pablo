@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
+
 var SPEED = 300.0
 var JUMP_VELOCITY = -400.0
 
 @onready var hitbox = $Hitbox
 @onready var anim_sprite = $AnimatedSprite2D
+
 
 func _ready():
 	print_hitbox_size()

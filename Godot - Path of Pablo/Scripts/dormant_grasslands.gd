@@ -6,7 +6,6 @@ var numtalk = 0
 var mr_smiley_pressed = false
 var key_collected = false
 var bpressed = false
-var speedrun_time = 0
 var game_done = false
 @onready var mr_smiley_talk_panel = $"Global_Characters/Mr Smiley Talk Panel"
 @onready var mr_smiley = $"MrSmiley Event/MrSmiley"
@@ -37,6 +36,8 @@ func _ready():
 	key.visible = true
 	platform_6.visible = true
 	booster_pack.visible = false
+	Global.coins = 0
+	Global.time_speedrun = 0
 
 func _process(_delta):
 	if numtalk == 0 and mr_smiley_pressed == true:
@@ -118,4 +119,4 @@ func _on_button_pressed():
 
 func _on_speedrun_timer_timeout():
 	if game_done == false:
-		speedrun_time += 1
+		Global.time_speedrun += 1

@@ -23,10 +23,6 @@ Global="*res://global.gd"
 
 window/stretch/mode="canvas_items"
 
-[global_group]
-
-player=""
-
 [gui]
 
 theme/custom_font="uid://2iswwv0mx8lo"

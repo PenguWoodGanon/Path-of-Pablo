@@ -85,3 +85,5 @@ shape = SubResource("RectangleShape2D_htl8c")
 
 [node name="DestinationPoint" type="Marker2D" parent="."]
 position = Vector2(-56, 8)
+
+[connection signal="body_entered" from="." to="." method="_on_portal_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://dggnjne3dhh1s"]
+[gd_scene load_steps=103 format=3 uid="uid://dggnjne3dhh1s"]
 
 [ext_resource type="Script" uid="uid://eoll4j6ft2ul" path="res://Scripts/dormant_grasslands.gd" id="1_e1dbv"]
 [ext_resource type="Texture2D" uid="uid://crrx8f0y6xjc3" path="res://Assets/TileMaps/Grass TileMap.png" id="1_epmka"]
@@ -29,12 +29,13 @@
 [ext_resource type="Texture2D" uid="uid://cib7q83vowd5l" path="res://Assets/Cards/Speed_Card.png" id="23_evpae"]
 [ext_resource type="Texture2D" uid="uid://dfgjsacnh2fnb" path="res://Assets/Cards/Paul_Card.png" id="24_75dln"]
 [ext_resource type="Texture2D" uid="uid://c05k3dps526bx" path="res://Assets/Cards/Slime_Card.png" id="25_64ahh"]
-[ext_resource type="Script" uid="uid://ct1ats0eh32u5" path="res://booster_pack.gd" id="29_64ahh"]
+[ext_resource type="Script" uid="uid://ct1ats0eh32u5" path="res://Scripts/booster_pack.gd" id="29_64ahh"]
 [ext_resource type="Texture2D" uid="uid://dsxkbc8y5apod" path="res://Assets/Cards/Booster_Pack.png" id="29_75dln"]
 [ext_resource type="Texture2D" uid="uid://c6pewaobofi0k" path="res://Assets/Icons/key_small3.png" id="30_cpo1y"]
 [ext_resource type="PackedScene" uid="uid://cdr1bv0oxq4ue" path="res://Scenes/Objects/coin.tscn" id="30_evpae"]
 [ext_resource type="Texture2D" uid="uid://cuquow86rmh3b" path="res://Assets/Other/door.png" id="31_cw1uh"]
 [ext_resource type="PackedScene" uid="uid://ck1ywllq625yg" path="res://Scenes/Objects/portal.tscn" id="33_qr822"]
+[ext_resource type="PackedScene" uid="uid://djvgiwwonpqk7" path="res://Scenes/Objects/end.tscn" id="36_6syfq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ihv"]
 texture = ExtResource("1_epmka")
@@ -1421,6 +1422,12 @@ go to the shop"
 
 [node name="Speedrun Timer" type="Timer" parent="."]
 
+[node name="End" parent="." instance=ExtResource("36_6syfq")]
+position = Vector2(1246, -128)
+
+[node name="CollisionShape2D" parent="End" index="1"]
+position = Vector2(0, -32.5)
+
 [connection signal="pressed" from="Global_Characters/Characters/PabloCard/Button" to="Global_Characters/Characters" method="_on_pablo_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/MrSmileyCard/Button" to="Global_Characters/Characters" method="_on_button_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/DonutCard/Button" to="Global_Characters/Characters" method="_on_donut_pressed"]
@@ -1439,3 +1446,4 @@ go to the shop"
 [editable path="Spikes/Spikes2"]
 [editable path="Spikes/Spikes"]
 [editable path="Portal/Portal"]
+[editable path="End"]
