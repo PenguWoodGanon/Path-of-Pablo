@@ -21,6 +21,7 @@ var game_done = false
 @onready var platform_6 = $Platforms/Platform6
 @onready var booster_pack = $"Global_Characters/Booster Pack"
 @onready var speedrun_timer = $"Speedrun Timer"
+@onready var door_label = $Label
 
 
 func _ready():
@@ -38,6 +39,7 @@ func _ready():
 	booster_pack.visible = false
 	Global.coins = 0
 	Global.time_speedrun = 0
+	door_label.visible = false
 
 func _process(_delta):
 	if numtalk == 0 and mr_smiley_pressed == true:
@@ -72,6 +74,7 @@ func _process(_delta):
 			Global.char_move = true
 	if key_collected == true:
 		key.visible = false
+		door_label.visible = true
 	if Input.is_action_just_pressed("shop"):
 		if bpressed == false:
 			bpressed = true
