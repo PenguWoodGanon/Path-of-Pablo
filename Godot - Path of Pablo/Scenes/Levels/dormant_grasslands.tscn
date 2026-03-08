@@ -1428,6 +1428,17 @@ position = Vector2(1246, -128)
 [node name="CollisionShape2D" parent="End" index="1"]
 position = Vector2(0, -32.5)
 
+[node name="Label" type="Label" parent="."]
+offset_left = 594.0
+offset_top = -119.0
+offset_right = 1045.0
+offset_bottom = -54.0
+scale = Vector2(0.13119344, 0.13119344)
+theme_override_font_sizes/font_size = 50
+text = "Press To Unlock"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Global_Characters/Characters/PabloCard/Button" to="Global_Characters/Characters" method="_on_pablo_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/MrSmileyCard/Button" to="Global_Characters/Characters" method="_on_button_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/DonutCard/Button" to="Global_Characters/Characters" method="_on_donut_pressed"]

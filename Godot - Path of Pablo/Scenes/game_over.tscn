@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d0gowwf7dwlu" path="res://Scripts/game_over.gd" id="1_eoghk"]
 [ext_resource type="AudioStream" uid="uid://bc81e3cp48a11" path="res://Assets/SFX/downer_noise.mp3" id="1_ojehl"]
 [ext_resource type="Texture2D" uid="uid://byfdioshapnor" path="res://Assets/Other/gregory-ligman-brick-02.jpg" id="3_14u15"]
-[ext_resource type="FontFile" uid="uid://bh0yv0k5gdcxw" path="res://Assets/Audiowide-Regular.ttf" id="4_j3ryr"]
+[ext_resource type="FontFile" uid="uid://2iswwv0mx8lo" path="res://Assets/Audiowide-Regular.ttf" id="4_j3ryr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjluv"]
 bg_color = Color(0.31616732, 0.31616738, 0.31616727, 1)

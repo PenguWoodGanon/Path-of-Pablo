@@ -1,9 +1,10 @@
 extends Control
 
+@onready var coins = $Coins
 
 func _ready():
 	Global.total_coins += Global.coins
-	Global.char_pablo = false
+	Global.char_pablo = true
 	Global.char_mrsmiley = false
 	Global.char_speed = true
 	Global.char_megapablo = false
@@ -11,9 +12,17 @@ func _ready():
 	Global.char_paul = false
 	Global.char_slime = false
 	Global.char_donut = false
+	#Unlock
+	Global.mrsmiley_unlocked = false
+	Global.speed_unlocked = true
+	Global.megapablo_unlocked = false
+	Global.knight_unlocked = false
+	Global.paul_unlocked = false
+	Global.slime_unlocked = false
+	Global.donut_unlocked = false
 	Global.save()
 	Global.levels_beaten += 1
-	$Coins.text = str("Coins Collected : ", Global.coins)
+	coins.text = str("Coins Collected : ", Global.coins)
 
 
 func _on_finish_pressed():
