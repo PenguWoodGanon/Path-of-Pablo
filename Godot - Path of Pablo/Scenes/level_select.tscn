@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdk2xglt08pfb"]
+[gd_scene load_steps=7 format=3 uid="uid://cdk2xglt08pfb"]
 
 [ext_resource type="Script" uid="uid://xbsmrea77hw2" path="res://Scripts/level_select.gd" id="1_nkys2"]
+[ext_resource type="Texture2D" uid="uid://b28fyqmevj82j" path="res://Assets/Screenshots/dormgrass_screenshot.png" id="2_2sqnl"]
 [ext_resource type="FontFile" uid="uid://2iswwv0mx8lo" path="res://Assets/Audiowide-Regular.ttf" id="2_lx4vd"]
+[ext_resource type="Texture2D" uid="uid://wfh3f51qsr0y" path="res://Assets/Screenshots/swamp_background.png" id="3_2sqnl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72w8f"]
+bg_color = Color(0.6, 0.6, 0.6, 0.4745098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lx4vd"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -11,6 +23,52 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nkys2")
+
+[node name="DormBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2sqnl")
+
+[node name="SwampBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2sqnl")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_72w8f")
+
+[node name="Room" type="Node" parent="."]
+
+[node name="LineEdit" type="LineEdit" parent="Room"]
+offset_left = 209.0
+offset_top = 12.0
+offset_right = 619.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 25
+placeholder_text = " Enter Room Name"
+max_length = 20
+
+[node name="Label" type="Label" parent="Room"]
+offset_left = 24.0
+offset_right = 216.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 25
+text = "Room Name : "
+vertical_alignment = 1
 
 [node name="Biomes" type="Panel" parent="."]
 layout_mode = 1
@@ -51,4 +109,24 @@ offset_bottom = 133.0
 text = "(Tutorial)
 Dormant Grasslands"
 
+[node name="swampybog" type="Button" parent="Biomes"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 166.0
+offset_right = 258.0
+offset_bottom = 216.0
+text = "Swampy Bog"
+
+[node name="Embark" type="Button" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 532.0
+offset_right = 750.0
+offset_bottom = 624.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lx4vd")
+text = "EMBARK"
+
 [connection signal="pressed" from="Biomes/dormgrass" to="." method="_on_dormgrass_pressed"]
+[connection signal="pressed" from="Biomes/swampybog" to="." method="_on_swampy_bog_pressed"]
+[connection signal="pressed" from="Embark" to="." method="_on_embark_pressed"]
