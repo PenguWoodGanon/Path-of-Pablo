@@ -3,13 +3,16 @@ extends Area2D
 var entered = false
 @onready var timer = $Timer
 
+
 func _on_spikes_entered(body: Node2D):
 	if entered == false:
-		body.set_position($DestinationPoint.global_position)
+		entered = true
+		body.global_position = $DestinationPoint.global_position
 		Global.health -= 1
 		timer.start()
+		print("Blade hit!")
 
 
 
-func when_timer_finished():
+func _on_timer_timeout():
 	entered = false
