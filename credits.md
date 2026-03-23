@@ -1,17 +1,17 @@
 Credits
 -----------------------------------------
-**Game Production:
+Game Production:
 Pengu Game Studios
-**Team Lead
+Team Lead
 Max Heywood
-**Graphics
+Graphics
 Max Heywood
-**Level Design
+Level Design
 Max Heywood
-**Publishing and Review
+Publishing and Review
 Max Heywood
-**SFX
+SFX
 Max Heywood
-**Playtester Team
+Playtester Team
 Playtester #1: Jack Christopher
 Playtester #2: Evan Haney
