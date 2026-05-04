@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdk2xglt08pfb"]
+[gd_scene format=3 uid="uid://cdk2xglt08pfb"]
 
 [ext_resource type="Script" uid="uid://xbsmrea77hw2" path="res://Scripts/level_select.gd" id="1_nkys2"]
 [ext_resource type="Texture2D" uid="uid://b28fyqmevj82j" path="res://Assets/Screenshots/dormgrass_screenshot.png" id="2_2sqnl"]
 [ext_resource type="FontFile" uid="uid://2iswwv0mx8lo" path="res://Assets/Audiowide-Regular.ttf" id="2_lx4vd"]
 [ext_resource type="Texture2D" uid="uid://wfh3f51qsr0y" path="res://Assets/Screenshots/swamp_background.png" id="3_2sqnl"]
+[ext_resource type="Texture2D" uid="uid://jl8tut480o78" path="res://Assets/Screenshots/underwater_castle_screenshot.png" id="4_72w8f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72w8f"]
 bg_color = Color(0.6, 0.6, 0.6, 0.4745098)
@@ -15,7 +16,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="LevelSelect" type="Control"]
+[node name="LevelSelect" type="Control" unique_id=2057746196]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +25,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nkys2")
 
-[node name="DormBackground" type="TextureRect" parent="."]
+[node name="DormBackground" type="TextureRect" parent="." unique_id=563093000]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,7 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_2sqnl")
 
-[node name="SwampBackground" type="TextureRect" parent="."]
+[node name="SwampBackground" type="TextureRect" parent="." unique_id=39599487]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,7 +43,16 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_2sqnl")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="CastleBackground" type="TextureRect" parent="." unique_id=599659891]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_72w8f")
+
+[node name="Panel" type="Panel" parent="." unique_id=1810739537]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,9 +61,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_72w8f")
 
-[node name="Room" type="Node" parent="."]
+[node name="Room" type="Node" parent="." unique_id=1804090884]
 
-[node name="LineEdit" type="LineEdit" parent="Room"]
+[node name="LineEdit" type="LineEdit" parent="Room" unique_id=24631845]
 offset_left = 209.0
 offset_top = 12.0
 offset_right = 619.0
@@ -62,7 +72,7 @@ theme_override_font_sizes/font_size = 25
 placeholder_text = " Enter Room Name"
 max_length = 20
 
-[node name="Label" type="Label" parent="Room"]
+[node name="Label" type="Label" parent="Room" unique_id=1899543239]
 offset_left = 24.0
 offset_right = 216.0
 offset_bottom = 97.0
@@ -70,7 +80,7 @@ theme_override_font_sizes/font_size = 25
 text = "Room Name : "
 vertical_alignment = 1
 
-[node name="Biomes" type="Panel" parent="."]
+[node name="Biomes" type="Panel" parent="." unique_id=1424804544]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -84,7 +94,7 @@ offset_bottom = 277.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="Biomes_Title" type="Label" parent="Biomes"]
+[node name="Biomes_Title" type="Label" parent="Biomes" unique_id=1534024719]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -100,7 +110,7 @@ theme_override_font_sizes/font_size = 100
 text = "Biomes"
 horizontal_alignment = 1
 
-[node name="dormgrass" type="Button" parent="Biomes"]
+[node name="dormgrass" type="Button" parent="Biomes" unique_id=579288532]
 layout_mode = 0
 offset_left = 69.0
 offset_top = 102.0
@@ -109,15 +119,39 @@ offset_bottom = 133.0
 text = "(Tutorial)
 Dormant Grasslands"
 
-[node name="swampybog" type="Button" parent="Biomes"]
+[node name="swampybog" type="Button" parent="Biomes" unique_id=1129542969]
 layout_mode = 0
 offset_left = 69.0
-offset_top = 166.0
+offset_top = 167.0
 offset_right = 258.0
-offset_bottom = 216.0
+offset_bottom = 217.0
 text = "Swampy Bog"
 
-[node name="Embark" type="Button" parent="."]
+[node name="watercastle" type="Button" parent="Biomes" unique_id=1378952495]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 232.0
+offset_right = 258.0
+offset_bottom = 282.0
+text = "Underwater Castle"
+
+[node name="baitridge" type="Button" parent="Biomes" unique_id=2081840421]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 297.0
+offset_right = 258.0
+offset_bottom = 347.0
+text = "Ragebait Ridge"
+
+[node name="heaven\'sgate" type="Button" parent="Biomes" unique_id=592298069]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 364.0
+offset_right = 258.0
+offset_bottom = 414.0
+text = "Heaven's Gate"
+
+[node name="Embark" type="Button" parent="." unique_id=190318491]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 532.0
@@ -129,4 +163,7 @@ text = "EMBARK"
 
 [connection signal="pressed" from="Biomes/dormgrass" to="." method="_on_dormgrass_pressed"]
 [connection signal="pressed" from="Biomes/swampybog" to="." method="_on_swampy_bog_pressed"]
+[connection signal="pressed" from="Biomes/watercastle" to="." method="_on_watercastle_pressed"]
+[connection signal="pressed" from="Biomes/baitridge" to="." method="_on_groundtunnels_pressed"]
+[connection signal="pressed" from="Biomes/heaven\'sgate" to="." method="_on_heavensgate_pressed"]
 [connection signal="pressed" from="Embark" to="." method="_on_embark_pressed"]

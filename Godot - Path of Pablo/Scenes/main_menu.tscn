@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ca2ubj3avevtt"]
+[gd_scene format=3 uid="uid://ca2ubj3avevtt"]
 
 [ext_resource type="Script" uid="uid://nwoxenj4k3b2" path="res://Scripts/main_menu.gd" id="1_48xlc"]
 [ext_resource type="FontFile" uid="uid://2iswwv0mx8lo" path="res://Assets/Audiowide-Regular.ttf" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://ckia6hakl1olt" path="res://Assets/Icons/game-icon.png" id="3_1ehe0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -13,7 +14,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=917076753]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_48xlc")
 
-[node name="New Game" type="Button" parent="."]
+[node name="New Game" type="Button" parent="." unique_id=2023679950]
 layout_mode = 0
 offset_top = 216.0
 offset_right = 348.0
@@ -31,7 +32,7 @@ theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 27
 text = "New Game"
 
-[node name="Profile" type="Button" parent="."]
+[node name="Profile" type="Button" parent="." unique_id=623585058]
 layout_mode = 0
 offset_top = 305.0
 offset_right = 348.0
@@ -40,7 +41,7 @@ theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 27
 text = "Profile"
 
-[node name="Settings" type="Button" parent="."]
+[node name="Settings" type="Button" parent="." unique_id=1170880230]
 layout_mode = 0
 offset_top = 400.0
 offset_right = 348.0
@@ -49,7 +50,7 @@ theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 27
 text = "Settings"
 
-[node name="Quit Game" type="Button" parent="."]
+[node name="Quit Game" type="Button" parent="." unique_id=428651255]
 layout_mode = 0
 offset_top = 496.0
 offset_right = 348.0
@@ -58,13 +59,90 @@ theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 27
 text = "Quit Game"
 
-[node name="SettingsMenu" type="Panel" parent="."]
+[node name="GameIcon" type="Sprite2D" parent="." unique_id=1387289049]
+position = Vector2(95, 100)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("3_1ehe0")
+
+[node name="Title" type="Node" parent="." unique_id=266068796]
+
+[node name="Title" type="Label" parent="Title" unique_id=366190030]
+offset_left = 180.0
+offset_top = 33.0
+offset_right = 413.0
+offset_bottom = 168.0
+theme_override_font_sizes/font_size = 54
+text = "Path of"
+
+[node name="Title2" type="Label" parent="Title" unique_id=205498815]
+offset_left = 180.0
+offset_top = 86.0
+offset_right = 413.0
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 46
+text = "Pablo"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=588886097]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -385.0
+offset_top = -264.0
+offset_right = -48.0
+offset_bottom = 264.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ChangeLog" type="Node" parent="." unique_id=1331070379]
+
+[node name="Title" type="Label" parent="ChangeLog" unique_id=203057684]
+anchors_preset = -1
+offset_left = 783.0
+offset_top = 78.0
+offset_right = 1077.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 30
+text = "ChangeLog"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Version" type="Label" parent="ChangeLog" unique_id=1701666284]
+offset_left = 781.0
+offset_top = 135.0
+offset_right = 1072.0
+offset_bottom = 156.0
+text = "V: 0.6.0"
+horizontal_alignment = 1
+
+[node name="Changes" type="Label" parent="ChangeLog" unique_id=390730163]
+offset_left = 786.0
+offset_top = 175.0
+offset_right = 1077.0
+offset_bottom = 568.0
+theme_override_font_sizes/font_size = 26
+text = "Changes:
+
+EARLY ACEESS
+First 2 Levels Done
+Main Menu Redone
+
+DISCLAIMER:
+This is an early
+access game. Bugs
+will occur"
+horizontal_alignment = 1
+
+[node name="SettingsMenu" type="Panel" parent="." unique_id=975195277]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1ehe0")
 
-[node name="Darkener" type="Panel" parent="SettingsMenu"]
+[node name="Darkener" type="Panel" parent="SettingsMenu" unique_id=294611501]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -74,7 +152,7 @@ offset_bottom = 612.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Settings Panel" type="Panel" parent="SettingsMenu"]
+[node name="Settings Panel" type="Panel" parent="SettingsMenu" unique_id=891655254]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -89,7 +167,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_48xlc")
 
-[node name="Erase_Save_Data" type="Button" parent="SettingsMenu"]
+[node name="Erase_Save_Data" type="Button" parent="SettingsMenu" unique_id=1399839386]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -106,7 +184,7 @@ theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 40
 text = "Erase Save Data"
 
-[node name="Volume" type="HSlider" parent="SettingsMenu"]
+[node name="Volume" type="HSlider" parent="SettingsMenu" unique_id=1933544866]
 layout_mode = 0
 offset_left = 278.0
 offset_top = 128.0
@@ -114,7 +192,7 @@ offset_right = 870.0
 offset_bottom = 192.0
 value = 50.0
 
-[node name="Label" type="Label" parent="SettingsMenu"]
+[node name="Label" type="Label" parent="SettingsMenu" unique_id=820429150]
 layout_mode = 0
 offset_left = 470.0
 offset_top = 78.0
