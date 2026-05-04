@@ -43,7 +43,7 @@ func _on_embark_pressed():
 	if swampybog == true:
 		get_tree().change_scene_to_file("res://Scenes/Levels/swampy_bog.tscn")
 	if undercastle == true:
-		get_tree().change_scene_to_file("res://Scenes/Levels/underwater_castle.tscn")
+		get_tree().change_scene_to_file("res://Scenes/construction.tscn")
 	else:
 		print("No Level Selected")
 
