@@ -9,10 +9,7 @@ func _on_spikes_entered(body: Node2D):
 		entered = true
 		body.global_position = $DestinationPoint.global_position
 		Global.health -= 1
-		timer.start()
 		print("Blade hit!")
 
-
-
-func _on_timer_timeout():
+func _on_spikes_exited(body: Node2D):
 	entered = false

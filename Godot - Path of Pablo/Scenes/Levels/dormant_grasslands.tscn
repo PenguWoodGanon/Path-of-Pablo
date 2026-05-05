@@ -566,9 +566,6 @@ bg_color = Color(0.92099476, 0.9209946, 0.9209946, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir0mu"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cw1uh"]
-size = Vector2(16, 7.1111145)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evpae"]
 size = Vector2(32, 64)
 
@@ -631,6 +628,9 @@ _data = {
 &"RESET": SubResource("Animation_64ahh"),
 &"unlock": SubResource("Animation_75dln")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cw1uh"]
+size = Vector2(16, 7.1111145)
 
 [node name="Dormant Grasslands" type="Node2D" unique_id=273638913]
 script = ExtResource("1_e1dbv")
@@ -1351,38 +1351,28 @@ position = Vector2(-1, 3.25)
 [node name="DestinationPoint" parent="Portal/Portal" index="2"]
 position = Vector2(120, 8)
 
-[node name="Key" type="Area2D" parent="." unique_id=1704699217]
-position = Vector2(720, -629)
-scale = Vector2(2.25, 2.25)
+[node name="Misc" type="Node" parent="." unique_id=652701762]
 
-[node name="Sprite" type="Sprite2D" parent="Key" unique_id=1854904453]
-texture = ExtResource("30_cpo1y")
-region_enabled = true
-region_rect = Rect2(1, 4, 15, 7)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Key" unique_id=365495566]
-shape = SubResource("RectangleShape2D_cw1uh")
-
-[node name="Door" type="StaticBody2D" parent="." unique_id=1963034382]
+[node name="Door" type="StaticBody2D" parent="Misc" unique_id=1963034382]
 position = Vector2(624, -160)
 
-[node name="Door" type="Sprite2D" parent="Door" unique_id=857111474]
+[node name="Door" type="Sprite2D" parent="Misc/Door" unique_id=857111474]
 texture = ExtResource("31_cw1uh")
 
-[node name="Padlock" type="Sprite2D" parent="Door/Door" unique_id=1382458264]
+[node name="Padlock" type="Sprite2D" parent="Misc/Door/Door" unique_id=1382458264]
 position = Vector2(-0.5, 0.49996948)
 scale = Vector2(0.04101549, 0.04101549)
 texture = ExtResource("20_poxwf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=734741353]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Misc/Door" unique_id=734741353]
 shape = SubResource("RectangleShape2D_evpae")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Door" unique_id=1746042593]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Misc/Door" unique_id=1746042593]
 root_node = NodePath("../Door")
 libraries/ = SubResource("AnimationLibrary_qr822")
 speed_scale = 4.0
 
-[node name="Button" type="Button" parent="Door" unique_id=1510851625]
+[node name="Button" type="Button" parent="Misc/Door" unique_id=1510851625]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1394,24 +1384,16 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 
-[node name="Shop Label" type="Label" parent="." unique_id=120938785]
-offset_left = 685.0
-offset_top = -181.0
-offset_right = 816.0
-offset_bottom = -136.0
-scale = Vector2(0.8015778, 0.8015778)
-text = "Press \"B\" to
-go to the shop"
+[node name="Label2" type="Label" parent="Misc" unique_id=1657331128]
+offset_left = -58.0
+offset_top = -41.000004
+offset_right = 76.0
+offset_bottom = 3.9999962
+scale = Vector2(0.40098387, 0.40669414)
+text = "If stuck, 
+press A then D"
 
-[node name="Speedrun Timer" type="Timer" parent="." unique_id=806925653]
-
-[node name="End" parent="." unique_id=826474234 instance=ExtResource("36_6syfq")]
-position = Vector2(1246, -128)
-
-[node name="CollisionShape2D" parent="End" index="1"]
-position = Vector2(0, -32.5)
-
-[node name="Label" type="Label" parent="." unique_id=12794186]
+[node name="Label" type="Label" parent="Misc" unique_id=12794186]
 offset_left = 594.0
 offset_top = -119.0
 offset_right = 1045.0
@@ -1422,14 +1404,34 @@ text = "Press To Unlock"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="." unique_id=1657331128]
-offset_left = -58.0
-offset_top = -41.000004
-offset_right = 76.0
-offset_bottom = 3.9999962
-scale = Vector2(0.40098387, 0.40669414)
-text = "If stuck, 
-press A then D"
+[node name="End" parent="Misc" unique_id=826474234 instance=ExtResource("36_6syfq")]
+position = Vector2(1246, -128)
+
+[node name="CollisionShape2D" parent="Misc/End" index="1"]
+position = Vector2(0, -32.5)
+
+[node name="Speedrun Timer" type="Timer" parent="Misc" unique_id=806925653]
+
+[node name="Shop Label" type="Label" parent="Misc" unique_id=120938785]
+offset_left = 685.0
+offset_top = -181.0
+offset_right = 816.0
+offset_bottom = -136.0
+scale = Vector2(0.8015778, 0.8015778)
+text = "Press \"B\" to
+go to the shop"
+
+[node name="Key" type="Area2D" parent="Misc" unique_id=1704699217]
+position = Vector2(720, -629)
+scale = Vector2(2.25, 2.25)
+
+[node name="Sprite" type="Sprite2D" parent="Misc/Key" unique_id=1854904453]
+texture = ExtResource("30_cpo1y")
+region_enabled = true
+region_rect = Rect2(1, 4, 15, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Misc/Key" unique_id=365495566]
+shape = SubResource("RectangleShape2D_cw1uh")
 
 [connection signal="pressed" from="Global_Characters/Characters/PabloCard/Button" to="Global_Characters/Characters" method="_on_pablo_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/MrSmileyCard/Button" to="Global_Characters/Characters" method="_on_button_pressed"]
@@ -1442,11 +1444,11 @@ press A then D"
 [connection signal="pressed" from="Global_Characters/Booster Pack/Panel/Button" to="Global_Characters/Booster Pack" method="_on_button_pressed"]
 [connection signal="pressed" from="Global_Characters/Mr Smiley Talk Panel/Panel/Button" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="MrSmiley Event/Button" to="." method="_on_mr_smiley_pressed"]
-[connection signal="body_entered" from="Key" to="." method="_on_key_entered"]
-[connection signal="pressed" from="Door/Button" to="." method="_on_door_pressed"]
-[connection signal="timeout" from="Speedrun Timer" to="." method="_on_speedrun_timer_timeout"]
+[connection signal="pressed" from="Misc/Door/Button" to="." method="_on_door_pressed"]
+[connection signal="timeout" from="Misc/Speedrun Timer" to="." method="_on_speedrun_timer_timeout"]
+[connection signal="body_entered" from="Misc/Key" to="." method="_on_key_entered"]
 
 [editable path="Spikes/Spikes2"]
 [editable path="Spikes/Spikes"]
 [editable path="Portal/Portal"]
-[editable path="End"]
+[editable path="Misc/End"]

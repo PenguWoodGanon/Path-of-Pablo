@@ -16,12 +16,12 @@ var game_done = false
 @onready var text_2 = $"Global_Characters/Mr Smiley Talk Panel/Panel/text2"
 @onready var text_3 = $"Global_Characters/Mr Smiley Talk Panel/Panel/text3"
 @onready var characters = $Global_Characters/Characters
-@onready var key = $Key
+@onready var key = $Misc/Key
 @onready var door_animation_player = $Door/AnimationPlayer
 @onready var platform_6 = $Platforms/Platform6
 @onready var booster_pack = $"Global_Characters/Booster Pack"
-@onready var speedrun_timer = $"Speedrun Timer"
-@onready var door_label = $Label
+@onready var speedrun_timer = $"Misc/Speedrun Timer"
+@onready var door_label = $Misc/Label
 
 
 func _ready():

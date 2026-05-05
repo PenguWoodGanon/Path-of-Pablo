@@ -1328,10 +1328,6 @@ script = ExtResource("27_6muig")
 wait_time = 0.1
 autostart = true
 
-[node name="Flag2" type="Sprite2D" parent="." unique_id=757685026]
-position = Vector2(231, -80)
-texture = ExtResource("29_0rcbu")
-
 [node name="Platforms" type="Node" parent="." unique_id=404117345]
 
 [node name="Platform" parent="Platforms" unique_id=1823708427 instance=ExtResource("28_13twu")]
@@ -1578,7 +1574,18 @@ position = Vector2(81.00001, -1032)
 [node name="Coin10" parent="Coins" unique_id=478008632 instance=ExtResource("32_pgnfk")]
 position = Vector2(-6.9999886, -1104)
 
-[node name="Warning" type="Label" parent="." unique_id=1090323528]
+[node name="Misc" type="Node" parent="." unique_id=184724431]
+
+[node name="End" parent="Misc" unique_id=1994687620 instance=ExtResource("32_5wdi0")]
+position = Vector2(447, -1087)
+
+[node name="Sprite2D" parent="Misc/End" index="0"]
+position = Vector2(0, 15)
+
+[node name="CollisionShape2D" parent="Misc/End" index="1"]
+position = Vector2(0, -32.5)
+
+[node name="Warning" type="Label" parent="Misc" unique_id=1090323528]
 offset_left = 180.0
 offset_top = -130.0
 offset_right = 365.0
@@ -1587,14 +1594,9 @@ scale = Vector2(0.5589467, 0.5589467)
 text = "Poisonous Gas Could
  Attack Any Minuite"
 
-[node name="End" parent="." unique_id=1994687620 instance=ExtResource("32_5wdi0")]
-position = Vector2(447, -1087)
-
-[node name="Sprite2D" parent="End" index="0"]
-position = Vector2(0, 15)
-
-[node name="CollisionShape2D" parent="End" index="1"]
-position = Vector2(0, -32.5)
+[node name="Flag2" type="Sprite2D" parent="Misc" unique_id=757685026]
+position = Vector2(231, -80)
+texture = ExtResource("29_0rcbu")
 
 [connection signal="pressed" from="Global_Characters/Characters/PabloCard/Button" to="Global_Characters/Characters" method="_on_pablo_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/MrSmileyCard/Button" to="Global_Characters/Characters" method="_on_button_pressed"]
@@ -1623,4 +1625,4 @@ position = Vector2(0, -32.5)
 [editable path="FormWall/Spikes/SpikesSW"]
 [editable path="FormWall/Spikes/SpikesSW2"]
 [editable path="FormWall/Spikes/SpikesSW3"]
-[editable path="End"]
+[editable path="Misc/End"]
