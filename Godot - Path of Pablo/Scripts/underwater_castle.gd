@@ -46,3 +46,7 @@ func _process(_delta):
 			booster_pack.visible = false
 			bpressed = false
 			Global.char_move = true
+
+
+func _on_area_2d_body_entered(body):
+	pass # Replace with function body.

@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://gdof82toi1sa" path="res://Assets/Other/flag.png" id="29_0rcbu"]
 [ext_resource type="PackedScene" uid="uid://djvgiwwonpqk7" path="res://Scenes/Objects/end.tscn" id="32_5wdi0"]
 [ext_resource type="PackedScene" uid="uid://cdr1bv0oxq4ue" path="res://Scenes/Objects/coin.tscn" id="32_pgnfk"]
+[ext_resource type="Texture2D" uid="uid://33di802gpq7v" path="res://Assets/TileMaps/fog.png" id="34_qblbk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f77el"]
 texture = ExtResource("26_pdlyl")
@@ -817,6 +818,16 @@ _data = {
 &"rotate": SubResource("Animation_jbyaf")
 }
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fqbxn"]
+texture = ExtResource("34_qblbk")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_87nhf"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_fqbxn")
+
 [node name="SwampyBog" type="Node2D" unique_id=1138977111]
 script = ExtResource("1_0rcbu")
 
@@ -1351,87 +1362,87 @@ speed_scale = 0.6
 [node name="Spikes" parent="Spikes" unique_id=7812338 instance=ExtResource("28_gvu7b")]
 position = Vector2(272, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes" index="2" unique_id=829283287]
 position = Vector2(-46, -82)
 
 [node name="Spikes2" parent="Spikes" unique_id=479239116 instance=ExtResource("28_gvu7b")]
 position = Vector2(305, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes2" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes2" index="2" unique_id=829283287]
 position = Vector2(-79, -82)
 
 [node name="Spikes3" parent="Spikes" unique_id=1716049716 instance=ExtResource("28_gvu7b")]
 position = Vector2(338, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes3" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes3" index="2" unique_id=829283287]
 position = Vector2(-112, -82)
 
 [node name="Spikes4" parent="Spikes" unique_id=460526731 instance=ExtResource("28_gvu7b")]
 position = Vector2(371, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes4" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes4" index="2" unique_id=829283287]
 position = Vector2(-145, -82)
 
 [node name="Spikes5" parent="Spikes" unique_id=871692001 instance=ExtResource("28_gvu7b")]
 position = Vector2(404, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes5" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes5" index="2" unique_id=829283287]
 position = Vector2(-178, -82)
 
 [node name="Spikes6" parent="Spikes" unique_id=551860940 instance=ExtResource("28_gvu7b")]
 position = Vector2(437, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes6" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes6" index="2" unique_id=829283287]
 position = Vector2(-211, -82)
 
 [node name="Spikes7" parent="Spikes" unique_id=2133602417 instance=ExtResource("28_gvu7b")]
 position = Vector2(470, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes7" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes7" index="2" unique_id=829283287]
 position = Vector2(-244, -82)
 
 [node name="Spikes8" parent="Spikes" unique_id=540446321 instance=ExtResource("28_gvu7b")]
 position = Vector2(503, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes8" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes8" index="2" unique_id=829283287]
 position = Vector2(-277, -82)
 
 [node name="Spikes9" parent="Spikes" unique_id=715723540 instance=ExtResource("28_gvu7b")]
 position = Vector2(536, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes9" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes9" index="2" unique_id=829283287]
 position = Vector2(-310, -82)
 
 [node name="Spikes10" parent="Spikes" unique_id=87377491 instance=ExtResource("28_gvu7b")]
 position = Vector2(569, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes10" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes10" index="2" unique_id=829283287]
 position = Vector2(-343, -82)
 
 [node name="Spikes12" parent="Spikes" unique_id=163353291 instance=ExtResource("28_gvu7b")]
 position = Vector2(628, -9)
 scale = Vector2(0.8, 1)
 
-[node name="DestinationPoint" parent="Spikes/Spikes12" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes12" index="2" unique_id=829283287]
 position = Vector2(-398, -90)
 
 [node name="Spikes11" parent="Spikes" unique_id=1255602668 instance=ExtResource("28_gvu7b")]
 position = Vector2(601, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes11" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes11" index="2" unique_id=829283287]
 position = Vector2(-375, -82)
 
 [node name="Spikes13" parent="Spikes" unique_id=1463758457 instance=ExtResource("28_gvu7b")]
 position = Vector2(744, -208)
 rotation = 1.5707964
 
-[node name="DestinationPoint" parent="Spikes/Spikes13" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes13" index="2" unique_id=829283287]
 position = Vector2(-375, -90)
 
 [node name="Spikes14" parent="Spikes" unique_id=2050465153 instance=ExtResource("28_gvu7b")]
 position = Vector2(272, -9)
 
-[node name="DestinationPoint" parent="Spikes/Spikes14" index="2"]
+[node name="DestinationPoint" parent="Spikes/Spikes14" index="2" unique_id=829283287]
 position = Vector2(-46, -82)
 
 [node name="FormWall" type="Node" parent="." unique_id=619266492]
@@ -1525,21 +1536,21 @@ texture = ExtResource("29_0rcbu")
 position = Vector2(96, -479.99997)
 scale = Vector2(1, 0.56)
 
-[node name="DestinationPoint" parent="FormWall/Spikes/SpikesSW" index="2"]
+[node name="DestinationPoint" parent="FormWall/Spikes/SpikesSW" index="2" unique_id=829283287]
 position = Vector2(-101, 241.07135)
 
 [node name="SpikesSW2" parent="FormWall/Spikes" unique_id=910592506 instance=ExtResource("28_gvu7b")]
 position = Vector2(-309, -654)
 rotation = 1.5707964
 
-[node name="DestinationPoint" parent="FormWall/Spikes/SpikesSW2" index="2"]
+[node name="DestinationPoint" parent="FormWall/Spikes/SpikesSW2" index="2" unique_id=829283287]
 position = Vector2(310, -306)
 
 [node name="SpikesSW3" parent="FormWall/Spikes" unique_id=1669265377 instance=ExtResource("28_gvu7b")]
 position = Vector2(-309, -624)
 rotation = 1.5707964
 
-[node name="DestinationPoint" parent="FormWall/Spikes/SpikesSW3" index="2"]
+[node name="DestinationPoint" parent="FormWall/Spikes/SpikesSW3" index="2" unique_id=829283287]
 position = Vector2(276, -304)
 
 [node name="Coins" type="Node" parent="." unique_id=1096740539]
@@ -1597,6 +1608,13 @@ text = "Poisonous Gas Could
 [node name="Flag2" type="Sprite2D" parent="Misc" unique_id=757685026]
 position = Vector2(231, -80)
 texture = ExtResource("29_0rcbu")
+
+[node name="Fog" type="Node" parent="." unique_id=455973762]
+
+[node name="TileMap" type="TileMap" parent="Fog" unique_id=163767843]
+tile_set = SubResource("TileSet_87nhf")
+format = 2
+layer_0/tile_data = PackedInt32Array(-393211, 0, 0, -393212, 0, 0, -327676, 0, 0, -262140, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -196600, 0, 0, -262136, 0, 0, -327672, 0, 0, -393208, 0, 0, -393209, 0, 0, -393210, 0, 0, -327674, 0, 0, -327675, 0, 0, -262139, 0, 0, -262138, 0, 0, -262137, 0, 0, -327673, 0, 0, -393207, 65536, 0, -327671, 65536, 0, -262135, 65536, 0, -196599, 65536, 0)
 
 [connection signal="pressed" from="Global_Characters/Characters/PabloCard/Button" to="Global_Characters/Characters" method="_on_pablo_pressed"]
 [connection signal="pressed" from="Global_Characters/Characters/MrSmileyCard/Button" to="Global_Characters/Characters" method="_on_button_pressed"]
